@@ -10,14 +10,17 @@ const About = () => {
           <div className="text">
             <div>⭐️ Je suis développeuse web, active professionnellement depuis plusieurs années, 
             je travaille essentiellement sur des technologies front-end, bien que j'apprécie
-            de plus en plus élargir mes compétences sur du back-end et du design web.</div>
+            de plus en plus élargir mon activité avec du back-end et du design web.</div>
             <br />
-            <div>🚀 Diplômée en 2013 en ingénierie physique, je suis capable de mener des projets qui nécessitent un niveau avancé en mathématiques par exemple.
-            Cette formation et mon expérience en tant qu'ingénieure m'ont apportées, d'autre part, une certaine rigueure, des capacités en gestion de projet, des méthodes de travail et d'apprentissage rapide.</div>
+            <div>🚀 Diplômée dans un premier temps en ingénierie physique, je suis capable de mener des projets qui nécessitent un niveau avancé en mathématiques notamment.
+            Cette formation et mon expérience en tant qu'ingénieure m'ont apportées la rigueur, la gestion de projet, ainsi que des méthodes de travail et d'apprentissage rapide.</div>
             <br />
-            <div>😻 Dans ma sphère personnelle, j'apprécie beaucoup la vulgarisation scientifique, et je marche de longues heures dans la nature avec mon chien.</div>
+            <div>🌤 Au quotidien, je code, mais j'apprécie aussi beaucoup le temps passé à lire et écouter de la vulgarisation scientifique, des podcasts, apprendre à naviguer, et randonner en pleine nature avec mon chien.</div>
             <br />
             <div>📍 Je suis actuellement basée en France, j'ai pour habitude de travailler à distance, en équipe, en anglais ou en français.</div>
+            <br />
+            <div>🔮 <a className="contact-page-link" href="/contact">Pour entrer en contact.</a></div>
+          
           </div>
         </div>
       </div>

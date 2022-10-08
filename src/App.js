@@ -1,4 +1,7 @@
+import React, { useState, useEffect, useContext } from 'react';
+import { Context } from './config/state.manager';
 import './App.scss';
+import { initialState } from './config/state.manager';
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { FaLinkedin } from 'react-icons/fa';
 import { BsTelephoneFill, BsGithub } from 'react-icons/bs';
@@ -6,22 +9,35 @@ import { GrMail } from 'react-icons/gr';
 import Main from './Main';
 
 const App = () => {
+  const { state } = useContext(Context);
+  const { homeIsActive } = state || initialState;
+  const [isActive, setIsActive] = useState(homeIsActive);
+
+  useEffect(() => {
+    setIsActive(homeIsActive === true);
+  }, [homeIsActive]);
+
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
+      <div className={`App ${isActive && 'HomeIsActive'}`}>
+        <header className={`App-header ${isActive && 'HomeIsActive'}`}>
           <div className='content-header'>
             <div className='container'>
-              <div className="title">
+              <div className={`title ${isActive && 'HomeIsActive'}`}>
                 <Link className="main-title" to="/">
-                  <img src="/assets/img/favicon.png" alt="icon" />
-                  Chloé Barbier
+                  {/* <img src="/assets/img/favicon.png" alt="icon" /> */}
+                  {/* <img src="/assets/img/bracket1.webp" alt="icon" /> */}
+                  {/* <img src="/assets/img/bracket2.png" alt="icon" /> */}
+                  <img className={`${isActive && 'HomeIsActive'}`} src="/assets/img/dev.png" alt="icon" />
+                  {/* Chloé Barbier */}
+                  
                 </Link>
-                {/* <div className="sub-title">Photographie</div> */}
               </div>
-              <nav className="menu">
-                <Link className="menu-item" to="/">Accueil</Link>
-                <Link className="menu-item" to="gallery">Galerie</Link>
+              <nav className={`menu ${isActive && 'HomeIsActive'}`}>
+                {/* <Link className="menu-item" to="/">Accueil</Link> */}
+                <Link className="menu-item" to="experience">Expérience</Link>
+                <Link className="menu-item" to="education">Formation</Link>
+                <Link className="menu-item" to="projects">Projets</Link>
                 <Link className="menu-item" to="about">À propos</Link>
                 <Link className="menu-item" to="contact">Contact</Link>
               </nav>
@@ -29,7 +45,7 @@ const App = () => {
           </div>
         </header>
         <Main />
-        <footer className="App-footer">
+        <footer className={`App-footer ${isActive && 'HomeIsActive'}`}>
           <div className='content-footer'>
             <div className='container'>
               <div className="author">© Chloé Barbier - Mise à jour 28 juin 2022</div>
