@@ -1,3 +1,43 @@
+// $base-color: #c6538c;
+$grey: rgba(104, 104, 104, 1);
+$greyT: rgba(104, 104, 104, 0.6);
+$blue: rgba(76, 145, 211, 1);
+$blueT: rgba(76, 145, 211, 0.6);
+$lightblue: rgba(145, 214, 255, 1);
+$lightblueT: rgba(145, 214, 255, 0.6);
+// $orange: rgba(196, 133, 106, 1);
+$orangeT: rgba(196, 133, 106, 0.6);
+
+$yellow: #fede5d;
+$pink: #ff7edb;
+$cyan: #03edf9;
+$salmon: #f97e72;
+$orange: #ee873c;
+$mint: #72f1b8;
+$purple: #b893ce;
+$bluepurple: #7a80b2;
+$fluopurple: #6923d3;
+$darkfluopurple: #231e3f;
+$darkpurple: #232530;
+$darkerpurple: #241b2f;
+$darkgrey: #333539;
+
+$pink-t: #ff7edb99;
+$mint-t: #72f1b899;
+$cyan-t: #03edf999;
+$yellow-t: #fede5d99;
+
+$lightfluopurple: rgba(142,69,246,1);
+$lightfluopurple-t: rgba(142,69,246,0.6);
+
+
+.App {
+  background-color: rgba(23,13,26,1);
+  background-color: $darkerpurple;
+  color: white;
+  // background-color: rgba(40,20,28,1);
+}
+
 .App {
   &.HomeIsActive {
     background-image: url("../public/assets/img/fond.jpg");
@@ -17,7 +57,7 @@
   font-family: 'Roboto Mono';
 }
 .App-header {
-  font-size: 14px;
+  font-size: 16px;
   // font-size: 12px;
   align-items: center;
   justify-content: center;
@@ -35,11 +75,20 @@
 
     .main-title {
       &:hover {
-        background-color: rgba(51,53,57,1);
-        
-        img:not(.HomeIsActive) {
-          filter: brightness(0) invert(1);
-        }
+        // background-color: $darkgrey;
+        // background-color: $bluepurple;
+        // background-color: $lightfluopurple; //$pink-t;
+        // margin: 1px;
+        border: 1px solid white;
+        box-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #0fa,
+        // 0 0 42px #0fa,
+        // 0 0 82px #0fa,
+        // 0 0 92px #0fa,
+        // 0 0 102px #0fa,
+        // 0 0 151px #0fa;
       }
       padding: 0.8rem;
       padding-right: 0.4rem;
@@ -50,9 +99,9 @@
         vertical-align: text-bottom;
         margin-right: 0.5rem;
         
-        &.HomeIsActive {
-          filter: brightness(0) invert(1);
-        }
+        // &.HomeIsActive {
+        filter: brightness(0) invert(1);
+        // }
       }
     }
   }
@@ -65,17 +114,30 @@
     .menu-item {
       margin-left: 1.5rem;
       margin-right: 0;
-      color: unset;
+      // color: unset;
+      color: white;
       // text-transform: uppercase;
       text-decoration: none;
       font-family: 'Roboto Mono';
     }
     .menu-item:hover {
-      background-color: rgba(51,53,57,1);
+      // background-color: rgba(51,53,57,1);
+      // background-color: $bluepurple;
+      // background-color: $pink-t;
+      // background-color: $lightfluopurple; //$pink-t;
+      text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      // 0 0 82px #0fa,
+      // 0 0 92px #0fa,
+      // 0 0 102px #0fa,
+      // 0 0 151px #0fa;
     }
-    &:not(.HomeIsActive) .menu-item:hover {
-      color: white;
-    }
+    // &:not(.HomeIsActive) .menu-item:hover {
+    //   color: white;
+    // }
   }
 }
 .App-main {
@@ -130,41 +192,106 @@
     }
   }
   .experience {
+    font-size: 16px;
+    font-weight: bolder;
+
+    .top-page {
+      margin-bottom: 2rem;
+      .page-title {
+        font-size: 18px;
+        text-align: left;
+        // text-shadow:
+        //   0 0 7px #fff,
+      }
+      .buttons {
+        text-align: right;
+        .button-collapser, .button-expander {
+          color: white;
+          padding: 0.5rem;
+          margin-left: 0.7rem;
+          border: 1px solid white;
+
+          &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: $darkfluopurple;
+            border-color: $darkfluopurple;
+          }
+        }
+      }
+    }
     .accordion {
-      background-color: #eee;
-      color: #444;
       cursor: pointer;
-      padding: 18px;
+      padding: 14px;
       width: 100%;
       text-align: left;
       border: none;
       outline: none;
       transition: 0.4s;
-    }
-    .active, .accordion:hover {
-      background-color: #ccc;
+      margin-bottom: 1rem;
+
+      &.active, &.accordion:hover {
+        // background-color: #ccc;
+        background-color: $bluepurple;
+        background-color: $lightfluopurple;
+        // color: black;
+      }
+
+      &:not(.active).accordion:hover {
+        .date .sign {
+          text-shadow:
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #fff,
+          0 0 42px #0fa,
+          0 0 82px #0fa,
+          0 0 92px #0fa,
+          0 0 102px #0fa,
+          0 0 151px #0fa;
+        }
+      }
+
+      background-color: $fluopurple;
+      background-color: $bluepurple;
+      background-color: $pink-t;
+      background-color: $lightfluopurple-t; //
+
+      color: white;
+      font-weight: bolder;
+
+      .job-position {
+        color: white;
+      }
+      .company {
+        color: $darkfluopurple;
+      }
+      .date {
+        // color: ;
+        text-align: right;
+        
+        .sign {
+          // color: $pink;
+          // color: $mint;
+          font-size: 1.2rem;
+          padding-left: 1.5rem;
+          // text-shadow:
+          // 0 0 7px #fff,
+          // 0 0 10px #fff,
+          // 0 0 21px #fff,
+          // 0 0 42px #0fa,
+          // 0 0 82px #0fa,
+          // 0 0 92px #0fa,
+          // 0 0 102px #0fa,
+          // 0 0 151px #0fa;
+        }
+      }
     }
     .panel {
       padding: 0 18px;
-      background-color: white;
+      // background-color: white;
       display: none;
       overflow: hidden;
-    }
-    .row {
-      margin-bottom: 1.3rem;
-      padding: 15px;
-
-      .description {
-        color: black;
-      }
-      
-      &:hover {
-        color: white;
-        background-color: black;
-        .description {
-          color: white;
-        }
-      }
+      color: white;
     }
   }
   .project, .projects, .experience, .education {
@@ -300,7 +427,8 @@
   
         span { 
           display: block;
-          width: 50px;
+          width: 3rem;
+          // width: 50px;
           float: left;
           background-color: rgba(256,256,256,1);
           // background-color: rgba(205, 240, 234, 0.7);
@@ -314,10 +442,26 @@
 
         .row {
           font-size: 1.2rem;
-          .grey {color: rgba(104, 104, 104, 0.6);}
-          .blue {color: rgba(76, 145, 211, 0.6);}
-          .lightblue {color: rgba(145, 214, 255, 0.6);}
-          .orange {color: rgba(196, 133, 106, 0.6);}
+          // .grey {
+            // color: rgba(104, 104, 104, 0.6);
+            // color: $pink-t;
+          // }
+          .blue, .grey {
+            color: rgba(76, 145, 211, 0.6);
+            color: $pink-t;
+            color: $yellow-t;
+          }
+          .lightblue {
+            color: rgba(145, 214, 255, 0.6);
+            color: $mint-t;
+            color: $lightfluopurple-t;
+
+          }
+          .orange {
+            color: rgba(196, 133, 106, 0.6);
+            color: $cyan-t; 
+            
+          }
           .white {
             font-weight:bolder;
             color: white;
@@ -338,8 +482,8 @@
 }
 .App-footer {
   &.HomeIsActive {color: white;}
-  &:not(.HomeIsActive) .social-media .social-media-link {color: black;}
-  &.HomeIsActive .social-media .social-media-link {color: white;}
+  // &:not(.HomeIsActive) .social-media .social-media-link {color: black;}
+  .social-media .social-media-link {color: white;}
 
   margin-top: auto;
   font-size: 12px;
@@ -372,11 +516,14 @@
 }
 .container {
   position: relative;
-  // margin-left: auto;
-  // margin-right: auto;
-  // max-width: 940px;
+}
+.App-header .container, .App-footer .container {
   margin-left: 3rem;
   margin-right: 3rem;
+}
+.App-main .container {
+  margin-left: 15%;
+  margin-right: 15%;
 }
 .content-header, .content-footer {
   overflow: hidden;

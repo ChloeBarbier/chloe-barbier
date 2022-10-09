@@ -122,12 +122,12 @@ export const experience = [
     { 
         id: '3', 
         to: "https://enphase.com/fr-fr", 
-        subtitle: "Enphase Energy Canada Holdings (Sofdesk)", 
+        subtitle: "Sofdesk", 
         title: 'Développeuse web front-end', 
         subtitle1: "mai 2017 - déc. 2018",
         subtitle2: "1 an 8 mois - Montréal CANADA",
         photo: 'sofdesk.jpeg', 
-        description: "Recherche, développement et maintien du module de dessin des applications web, Géométrie dans l'espace, Management Agile Scrum.",
+        description: "Développeuse web chez Enphase Energy Canada Holdings, anciennement Sofdesk. Recherche, développement et maintien du module de dessin des applications web, Géométrie dans l'espace, Management Agile Scrum.",
         projects: [
             projects.drawing, 
             projects.solargraf,
@@ -173,7 +173,7 @@ export const experience = [
     { 
         id: '5', 
         to: "https://www.sogeti.com/", 
-        subtitle: "SOGETI High Tech", 
+        subtitle: "Sogeti High Tech", 
         title: 'Ingénieure en développement logiciels', 
         subtitle1: "janvier 2013 - juin 2013",
         subtitle2: "6 mois - Toulouse FRANCE",
