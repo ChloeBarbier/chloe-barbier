@@ -1,5 +1,6 @@
 import React from 'react';
 import { experience }  from "../data/experience";
+import Title from './Title';
 
 const Experience = () => {
 
@@ -7,8 +8,6 @@ const Experience = () => {
     var button = document.getElementById(`button-${key}`);
     var panel = document.getElementById(`panel-${key}`);
     var sign = document.getElementById(`sign-${key}`);
-
-    console.log(button, button.classList)
 
     button.classList.toggle('active');
 
@@ -42,10 +41,15 @@ const Experience = () => {
     <div className='container experience'>
       <div className="grid-y">
         <div className='top-page grid-x'>
-          <div className='small-6 page-title'>Mon expérience professionnelle</div>
-          <div className='small-6 buttons'>
-            <button className="small-6 button-expander" onClick={onExpandAll}>Développer</button>
-            <button className="small-6 button-collapser" onClick={onCollapseAll}>Réduire</button>
+          <div className='cell auto page-title'>
+            <Title text="Expérience" />
+            {/* <Title text="Expérience professionnelle" /> */}
+          </div>
+          <div className='cell auto buttons'>
+            <div className='buttons-content'>
+              <button className="button-expander" onClick={onExpandAll}>Développer</button>
+              <button className="button-collapser" onClick={onCollapseAll}>Réduire</button>
+            </div>
           </div>
         </div>
         {experience.map((item, key) => {
@@ -54,28 +58,56 @@ const Experience = () => {
               <button className="accordion" id={`button-${key}`} onClick={() => onClick(key)}>
                 <div className="grid-x align-middle">
                   <div className='title small-8'>
-                    <span className='job-position'>{item.title}</span>
-                    <span className='company'> @{item.subtitle}</span>
+                    <span className='job-position'>{item.position}</span>
+                    <span className='company'> @{item.company}</span>
                   </div>
                   <div className='date small-4'>
-                    {item.subtitle1}
+                    {item.date}
                     <span className='sign' id={`sign-${key}`}>+</span>
                   </div>
                 </div>
               </button>
-              <div className="grid-x panel" id={`panel-${key}`}>
+              <div className="panel" id={`panel-${key}`}>
                 <div className='grid-x'>
-                  <div className="cell small-8 description">
-                    {/* <div className="title">{item.title}</div> */}
-                    {/* <div className="date">{item.subtitle}</div> */}
-                    <div className="date">{item.subtitle1}</div>
-                    <div className="date">{item.subtitle2}</div>
-                    <div className="text">{item.description}</div>
-                    <a key={key} href={item.to} target="_blank" className="row grid-x" rel="noreferrer">@site</a>
+                  <div className="cell small-9 grid-y description">
+                    {/* <div className="cell shrink duration">{item.duration}</div> */}
+                    
+                    <div className='cell details grid-x'>
+                      <div className="cell shrink grid-x location align-middle">
+                        <img className="cell shrink img-location" src="/assets/img/experience/location.png" alt="icon" />
+                        <div className="cell shrink">{item.location}</div>
+                      </div>
+                      <div className="cell shrink grid-x website align-middle">
+                        <img className="cell shrink img-website" src="/assets/img/experience/website.png" alt="icon" />
+                        <div className="cell shrink">
+                          <a key={key} href={item.to} target="_blank" className="row grid-x" rel="noreferrer">{item.website}</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="cell text">{item.text}</div>
+
+                    <div className='cell tags tools'>
+                      {item.tools.map((tool, i) => {
+                        return (
+                          <span key={`${key}-tool-${i}`} className='tag tool col1'>{tool.label}</span>
+                        );
+                      })}
+                    </div>
+
+                    <div className='cell tags projects'>
+                      {item.projects.map((project, i) => {
+                        return (
+                          <span key={`${key}-project-${i}`} className='tag project'>{project.label}</span>
+                        );
+                      })}
+                    </div>
                   </div>
-                  <div className="cell small-4 photo">
+
+                  <div className="cell small-3 photo">
                     <img src={`./assets/img/experience/` + item.photo} alt={item.photo} />
                   </div>
+
                 </div>
               </div>
             </React.Fragment>

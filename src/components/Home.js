@@ -1,59 +1,43 @@
-
-import Typewriter from "typewriter-effect";
+import React, { useEffect, useContext } from 'react';
+import { Context } from '../config/state.manager';
+import Title from './Title';
+import { DivEnd, DivStart, Text } from './Html';
 
 const Home = () => {
-  const text1 = "Développeuse web";
-  const text2 = "front-end";
-  const text3 = "hello world !";
+  const { dispatch } = useContext(Context);
+
+  const name = "Chloé Barbier";
+  const webdev = "Développeuse web";
+  const frontend = "front-end";
+  const engineer = "Ingénieure";
+  const physics = "physique";
+
+  useEffect(() => {
+    dispatch({ type:'setHomeIsActive', homeIsActive: true });
+    return () => dispatch({ type:'setHomeIsActive', homeIsActive: false });
+  }, [dispatch]);
 
   return (
     <div className='container home'>
-      <div className="grid-x">
-        {/* <div className="cell small-4 container-image"> */}
-        {/* <img className="image" src="../assets/img/test1.png" alt="laptop" /> */}
-        {/* </div> */}
-        <div className="cell small-12 container-title">
-          <div className="title1">{text1}</div>
-          <div className="title2">{text2}</div>
-          <div className="title3">
-            <div className="text">
-              {text3.split('').map((char, key) => {
-                return (<span key={key}>{char}</span>);
-              })}
-            </div>
+      <div className="container-title grid-y">
+          <Title  text={name}/>
+          <div className='title-html grid-y'>
+            <DivStart tab="" text="present job" />
+            <Text tab="one" text={webdev} />
+            <DivStart tab="one" text="specialization" />
+            <Text tab="two" text={frontend} />
+            <DivEnd tab="one" />
+            <DivEnd tab="" />
+            <DivStart tab="" text="job" />
+            <Text tab="one" text={engineer} />
+            <DivStart tab="one" text="specialization" />
+            <Text tab="two" text={physics} />
+            <DivEnd tab="one" />
+            <DivEnd tab="" />
           </div>
         </div>
-        {/* <div className="cell small-6 container-laptop">
-          <img className="image" src="../assets/img/laptop.webp" alt="laptop" />
-          <div className="text">
-            <Typewriter
-              options={{
-                // loop: true,
-                delay: 40
-              }}
-              onInit={(typewriter)=> {
-                typewriter
-                .typeString("< h1 ><br />")
-                .typeString("Envie de partager<br />")
-                .typeString("une idée<br />")
-                .typeString("un projet<br />")
-                .typeString("< /h1 ><br />")
-                .typeString("<br />")
-                .typeString("< link ><br />")
-                .typeString("<a href='/contact' class='button-contact'>  C'est ici. </a><br />")
-                .typeString("< /link >")
-                .pauseFor(5000)
-                // .deleteAll(0.001)
-                .start();
-              }}
-              />
-          </div>
-        </div> */}
-      </div>
     </div>
   );
 }
 
-// .deleteAll(0.001)
-  
 export default Home;

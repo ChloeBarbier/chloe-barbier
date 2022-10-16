@@ -1,27 +1,60 @@
+import Title from './Title';
+
+const introduction = 
+ 'Je suis développeuse web, active professionnellement depuis plusieurs années, je travaille essentiellement'
++' sur des technologies front-end, bien que j\'élargisse régulièrement mes compétences en back-end et design web.';
+const engineer = 'Étant également diplômée et expérimentée en ingénierie physique, je suis capable de mener'
++' à bien des projets qui nécessitent un niveau avancé en mathématiques, ou en sciences de manière plus générale.';
+const daily = 'Au quotidien, je code, mais j\'apprécie aussi beaucoup le temps passé à lire et écouter de'
++' la vulgarisation scientifique, des podcasts, apprendre à naviguer, et randonner en pleine nature avec mon chien.';
+const nowadays = 'Je suis actuellement en France, je travaille à distance, en équipe, en anglais ou en français.';
+const contact = 'Pour entrer en contact.';
+
+
 const About = () => {
   return (
     <div className='container about'>
-      <div className="grid-x">
-        <div className="cell small-6 photo">
-          <img src="../assets/img/portrait.JPG" alt="portrait" />
-        </div>
-        <div className="cell small-6 description">
-          <div className="title">Bonjour,</div>
-          <div className="text">
-            <div>⭐️ Je suis développeuse web, active professionnellement depuis plusieurs années, 
-            je travaille essentiellement sur des technologies front-end, bien que j'apprécie
-            de plus en plus élargir mon activité avec du back-end et du design web.</div>
-            <br />
-            <div>🚀 Diplômée dans un premier temps en ingénierie physique, je suis capable de mener des projets qui nécessitent un niveau avancé en mathématiques notamment.
-            Cette formation et mon expérience en tant qu'ingénieure m'ont apportées la rigueur, la gestion de projet, ainsi que des méthodes de travail et d'apprentissage rapide.</div>
-            <br />
-            <div>🌤 Au quotidien, je code, mais j'apprécie aussi beaucoup le temps passé à lire et écouter de la vulgarisation scientifique, des podcasts, apprendre à naviguer, et randonner en pleine nature avec mon chien.</div>
-            <br />
-            <div>📍 Je suis actuellement basée en France, j'ai pour habitude de travailler à distance, en équipe, en anglais ou en français.</div>
-            <br />
-            <div>🔮 <a className="contact-page-link" href="/contact">Pour entrer en contact.</a></div>
-          
+      <div className="grid-y">
+        <Title text="À propos" />
+        <div className='align-middle align-center grid-x'>
+          <div className="photo">
+            {/* <img src="../assets/img/portrait_debout_cadre.png" alt="portrait" /> */}
           </div>
+          <div className="cell shrink description about-description">
+            <div className='text'>
+              <span>Bonjour, Hi !</span>
+            </div>
+            <br />
+            <div className='text'>
+              <img className="img-bracket" src="/assets/img/about/about-bracket.png" alt="icon" />
+              <span>{introduction}</span>
+            </div>
+            <br />
+            <div className='text'>
+              <img className="img-rocket" src="/assets/img/about/about-rocket.png" alt="icon" />
+              <span>{engineer}</span>
+            </div>
+            <br />
+            <div className='text'>
+              <img className="img-daily" src="/assets/img/about/about-daily.png" alt="icon" />
+              <span>{daily}</span>
+            </div>
+            <br />
+            <div className='text'>
+              <img className="img-pin" src="/assets/img/about/about-pin.png" alt="icon" />
+              <span>{nowadays}</span>
+            </div>
+            <br />
+            <a className="text contact-page-link grid-x align-bottom align-center" href="/contact">
+              <div className='cell shrink'>
+                <img className="img-crystal" src="/assets/img/about/about-crystal.png" alt="icon" />
+              </div>
+              <div className='cell shrink contact-text'>
+                <div>{contact}</div>
+              </div>
+            </a>
+          </div>
+         
         </div>
       </div>
     </div>

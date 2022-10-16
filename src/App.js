@@ -19,21 +19,21 @@ const App = () => {
 
   return (
     <Router>
-      <div className={`App ${isActive && 'HomeIsActive'}`}>
-        <header className={`App-header ${isActive && 'HomeIsActive'}`}>
+      <div className={`App ${isActive ? 'HomeIsActive' : ''}`}>
+        <header className={`App-header ${isActive ? 'HomeIsActive' : ''}`}>
           <div className='content-header'>
             <div className='container'>
-              <div className={`title ${isActive && 'HomeIsActive'}`}>
+              <div className={`title ${isActive ? 'HomeIsActive' : ''}`}>
                 <Link className="main-title" to="/">
                   {/* <img src="/assets/img/favicon.png" alt="icon" /> */}
                   {/* <img src="/assets/img/bracket1.webp" alt="icon" /> */}
                   {/* <img src="/assets/img/bracket2.png" alt="icon" /> */}
-                  <img className={`${isActive && 'HomeIsActive'}`} src="/assets/img/dev.png" alt="icon" />
+                  <img className={`${isActive ? 'HomeIsActive' : ''}`} src="/assets/img/et2.png" alt="icon" />
                   {/* Chloé Barbier */}
                   
                 </Link>
               </div>
-              <nav className={`menu ${isActive && 'HomeIsActive'}`}>
+              <nav className={`menu ${isActive ? 'HomeIsActive' : ''}`}>
                 {/* <Link className="menu-item" to="/">Accueil</Link> */}
                 <Link className="menu-item" to="experience">Expérience</Link>
                 <Link className="menu-item" to="education">Formation</Link>
@@ -45,7 +45,7 @@ const App = () => {
           </div>
         </header>
         <Main />
-        <footer className={`App-footer ${isActive && 'HomeIsActive'}`}>
+        <footer className={`App-footer ${isActive ? 'HomeIsActive' : ''}`}>
           <div className='content-footer'>
             <div className='container'>
               <div className="author">© Chloé Barbier - Mise à jour 28 juin 2022</div>
