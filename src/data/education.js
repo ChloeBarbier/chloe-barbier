@@ -1,6 +1,13 @@
+const educationIds = {
+    udem: 'school-0-udem',
+    insa: 'school-1-insa',
+    uni: 'school-2-uni',
+    bellevue: 'school-3-bellevue'
+}
+
 export const education = [
     { 
-        id: '0', 
+        id: educationIds.udem, 
         to: "https://www.umontreal.ca/", 
         website: "www.umontreal.ca", 
         school: 'Université de Montréal',
@@ -13,7 +20,7 @@ export const education = [
         text: "Informatique appliquée, multimédia, design et intégration web. Développement informatique, programmation de solutions web avec HTML, CSS, JavaScript, PHP. Options : Base de données, Maquette web, Montage vidéo, Suite Adobe."
     },
     { 
-        id: '1', 
+        id: educationIds.insa, 
         to: "https://www.groupe-insa.fr/",
         website: "www.groupe-insa.fr",
         school: 'INSA de Toulouse',
@@ -26,7 +33,7 @@ export const education = [
         text: "Sciences fondamentales et Appliquées, Sciences physiques, Instrumentation." 
     },
     { 
-        id: '2', 
+        id: educationIds.uni, 
         to: "https://www.nottingham.ac.uk/", 
         website: "www.nottingham.ac.uk", 
         school: 'University of Nottingham', 
@@ -40,7 +47,7 @@ export const education = [
         text: "Échange universitaire. Sciences physiques."
     },
     { 
-        id: '3', 
+        id: educationIds.bellevue, 
         to: "https://bellevue-toulouse.mon-ent-occitanie.fr/les-cpge-classes-preparatoires/les-filieres-et-les-formations-cpge/mpsi-mathematiques-physique-et-sciences-de-l-ingenieur/mpsi-mathematiques-physique-et-sciences-de-l-ingenieur-cpge-1ere-annee-54188.htm", 
         website: "bellevue-toulouse.fr", 
         school: 'Lycée Bellevue', 

@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { Context } from '../config/state.manager';
-import Title from './Title';
-import { DivEnd, DivStart, Text } from './Html';
+import Title from '../components/Title';
+import { DivEnd, DivStart, Text } from '../components/Html';
 
 const Home = () => {
   const { dispatch } = useContext(Context);

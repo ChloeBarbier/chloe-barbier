@@ -1,14 +1,13 @@
-import React from 'react';
-import { education }  from "../data/education";
-
-import Title from './Title';
+import React, { useEffect } from 'react';
+import { experience }  from "../data/experience";
+import Title from '../components/Title';
 
 const Experience = () => {
 
-  const onClick = (key) => {
-    var button = document.getElementById(`button-${key}`);
-    var panel = document.getElementById(`panel-${key}`);
-    var sign = document.getElementById(`sign-${key}`);
+  const onClickExperience = (experienceId) => {
+    var button = document.getElementById(`button-${experienceId}`);
+    var panel = document.getElementById(`panel-${experienceId}`);
+    var sign = document.getElementById(`sign-${experienceId}`);
 
     button.classList.toggle('active');
 
@@ -37,13 +36,28 @@ const Experience = () => {
     for (var j = 0; j < panels.length; j++) panels.item(j).style.display = "none";
     for (var k = 0; k < signs.length; k++) signs.item(k).textContent = "+";
   }
+  const onClickProject = (id) => {
+    window.location.href = `/projects?view=list&projectId=${id}`;
+  }
+
+  useEffect(() => {
+    var url = new URL(window.location.href);
+    var experienceId = url.searchParams.get("experienceId");
+
+    if (experienceId?.length > 0) {
+      onClickExperience(experienceId);
+      var element = document.getElementById(`button-${experienceId}`);
+      element?.scrollIntoView();
+    }
+  }, [])
 
   return (
-    <div className='container education'>
+    <div className='container experience'>
       <div className="grid-y">
         <div className='top-page grid-x'>
           <div className='cell auto page-title'>
-            <Title text="Formation" />
+            <Title text="Expérience" />
+            {/* <Title text="Expérience professionnelle" /> */}
           </div>
           <div className='cell auto buttons'>
             <div className='buttons-content'>
@@ -52,47 +66,42 @@ const Experience = () => {
             </div>
           </div>
         </div>
-        {education.map((item, key) => {
+        {experience.map((item, key) => {
           return (
             <React.Fragment key={key}>
-              <button className="accordion" id={`button-${key}`} onClick={() => onClick(key)}>
+              <button className="accordion" id={`button-${item.id}`} onClick={() => onClickExperience(item.id)}>
                 <div className="grid-x align-middle">
                   <div className='title small-8'>
-                    <span className='job-position'>{item.graduation}</span>
-                    <span style={{marginTop: '1rem'}} className='company'> @{item.school}</span>
+                    <span className='job-position'>{item.position}</span>
+                    <span className='company'> @{item.company}</span>
                   </div>
                   <div className='date small-4'>
                     {item.date}
-                    <span className='sign' id={`sign-${key}`}>+</span>
+                    <span className='sign' id={`sign-${item.id}`}>+</span>
                   </div>
                 </div>
               </button>
-              <div className="panel" id={`panel-${key}`}>
+              <div className="panel" id={`panel-${item.id}`}>
                 <div className='grid-x'>
                   <div className="cell small-9 grid-y description">
                     {/* <div className="cell shrink duration">{item.duration}</div> */}
                     
                     <div className='cell details grid-x'>
                       <div className="cell shrink grid-x location align-middle">
-                        <img className="cell shrink img-location" src="/assets/img/experience/location.png" alt="icon" />
+                        <img className="cell shrink img-location icon" src="/assets/img/experience/location.png" alt="icon" />
                         <div className="cell shrink">{item.location}</div>
                       </div>
                       <div className="cell shrink grid-x website align-middle">
-                        <img className="cell shrink img-website" src="/assets/img/experience/website.png" alt="icon" />
+                        <img className="cell shrink img-website icon" src="/assets/img/experience/website.png" alt="icon" />
                         <div className="cell shrink">
                           <a key={key} href={item.to} target="_blank" className="row grid-x" rel="noreferrer">{item.website}</a>
                         </div>
                       </div>
-                     {item.prize ?
-                     <div className="cell shrink grid-x prize align-middle">
-                        <img className="cell shrink img-prize" src="/assets/img/experience/prize.png" alt="icon" />
-                        <div className="cell shrink">{item.prize}</div>
-                      </div> : null}
                     </div>
 
                     <div className="cell text">{item.text}</div>
 
-                    {/* <div className='cell tags tools'>
+                    <div className='cell tags tools'>
                       {item.tools.map((tool, i) => {
                         return (
                           <span key={`${key}-tool-${i}`} className='tag tool col1'>{tool.label}</span>
@@ -103,14 +112,20 @@ const Experience = () => {
                     <div className='cell tags projects'>
                       {item.projects.map((project, i) => {
                         return (
-                          <span key={`${key}-project-${i}`} className='tag project'>{project.label}</span>
+                          <span 
+                            key={`${key}-project-${project.id}`} 
+                            className='tag project' 
+                            onClick={() => onClickProject(project.idRef)}
+                          >
+                            {project.label}
+                            </span>
                         );
                       })}
-                    </div> */}
+                    </div>
                   </div>
 
                   <div className="cell small-3 photo">
-                    <img className="img-school" src={`./assets/img/education/` + item.photo} alt={item.photo} />
+                    <img src={`./assets/img/experience/` + item.photo} alt={item.photo} />
                   </div>
 
                 </div>

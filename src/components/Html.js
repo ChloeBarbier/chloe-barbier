@@ -20,6 +20,20 @@ const DivEnd = ({tab}) => (
     </div>
   );
 
+  DivEnd.defaultProps = {
+    tab: "",
+  };
+
+  DivStart.defaultProps = {
+    tab: "",
+    text: "",
+  };
+
+  Text.defaultProps = {
+    tab: "",
+    text: "",
+  };
+
   export {
     DivEnd,
     DivStart,

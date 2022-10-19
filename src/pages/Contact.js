@@ -1,8 +1,7 @@
 import { FaLinkedin } from 'react-icons/fa';
 import { BsTelephoneFill, BsGithub } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
-import Title from './Title';
-// import { DivEnd, DivStart, Text } from './Html';
+import Title from '../components/Title';
 
 const needInfo = "Besoin d'informations ?";
 const shareProject = "Envie de partager un projet ?";
@@ -50,7 +49,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="location">
-                <img className="img-location" src="/assets/img/experience/location.png" alt="icon" />
+                <img className="img-location icon" src="/assets/img/experience/location.png" alt="icon" />
                 France
               </div>
             </div>

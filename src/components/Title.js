@@ -15,4 +15,8 @@ const Title = ({text}) => (
   </div>
 );
 
-  export default Title;
+Title.defaultProps = {
+  text: ""
+};
+
+export default Title;

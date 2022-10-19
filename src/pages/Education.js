@@ -1,6 +1,7 @@
 import React from 'react';
-import { experience }  from "../data/experience";
-import Title from './Title';
+import { education }  from "../data/education";
+
+import Title from '../components/Title';
 
 const Experience = () => {
 
@@ -38,12 +39,11 @@ const Experience = () => {
   }
 
   return (
-    <div className='container experience'>
+    <div className='container education'>
       <div className="grid-y">
         <div className='top-page grid-x'>
           <div className='cell auto page-title'>
-            <Title text="Expérience" />
-            {/* <Title text="Expérience professionnelle" /> */}
+            <Title text="Formation" />
           </div>
           <div className='cell auto buttons'>
             <div className='buttons-content'>
@@ -52,14 +52,14 @@ const Experience = () => {
             </div>
           </div>
         </div>
-        {experience.map((item, key) => {
+        {education.map((item, key) => {
           return (
             <React.Fragment key={key}>
               <button className="accordion" id={`button-${key}`} onClick={() => onClick(key)}>
                 <div className="grid-x align-middle">
                   <div className='title small-8'>
-                    <span className='job-position'>{item.position}</span>
-                    <span className='company'> @{item.company}</span>
+                    <span className='job-position'>{item.graduation}</span>
+                    <span style={{marginTop: '1rem'}} className='company'> @{item.school}</span>
                   </div>
                   <div className='date small-4'>
                     {item.date}
@@ -74,20 +74,25 @@ const Experience = () => {
                     
                     <div className='cell details grid-x'>
                       <div className="cell shrink grid-x location align-middle">
-                        <img className="cell shrink img-location" src="/assets/img/experience/location.png" alt="icon" />
+                        <img className="cell shrink img-location icon" src="/assets/img/experience/location.png" alt="icon" />
                         <div className="cell shrink">{item.location}</div>
                       </div>
                       <div className="cell shrink grid-x website align-middle">
-                        <img className="cell shrink img-website" src="/assets/img/experience/website.png" alt="icon" />
+                        <img className="cell shrink img-website icon" src="/assets/img/experience/website.png" alt="icon" />
                         <div className="cell shrink">
                           <a key={key} href={item.to} target="_blank" className="row grid-x" rel="noreferrer">{item.website}</a>
                         </div>
                       </div>
+                     {item.prize ?
+                     <div className="cell shrink grid-x prize align-middle">
+                        <img className="cell shrink img-prize icon" src="/assets/img/experience/prize.png" alt="icon" />
+                        <div className="cell shrink">{item.prize}</div>
+                      </div> : null}
                     </div>
 
                     <div className="cell text">{item.text}</div>
 
-                    <div className='cell tags tools'>
+                    {/* <div className='cell tags tools'>
                       {item.tools.map((tool, i) => {
                         return (
                           <span key={`${key}-tool-${i}`} className='tag tool col1'>{tool.label}</span>
@@ -101,11 +106,11 @@ const Experience = () => {
                           <span key={`${key}-project-${i}`} className='tag project'>{project.label}</span>
                         );
                       })}
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="cell small-3 photo">
-                    <img src={`./assets/img/experience/` + item.photo} alt={item.photo} />
+                    <img className="img-school" src={`./assets/img/education/` + item.photo} alt={item.photo} />
                   </div>
 
                 </div>

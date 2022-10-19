@@ -1,12 +1,12 @@
 // import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import Home from './components/Home';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Project from './components/Project';
-import About from './components/About';
-import Contact from './components/Contact';
-import Education from "./components/Education";
+import Home from './pages/Home';
+import Experience from './pages/Experience';
+import Projects from './pages/Projects';
+// import Project from './pages/Project';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Education from "./pages/Education";
 
 const Main = () => {
   return (
@@ -19,7 +19,7 @@ const Main = () => {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/projects' element={<Projects />} />
-        <Route path='/projects/:id' element={<Project />} />
+        {/* <Route path='/projects/:id' element={<Project />} /> */}
         <Route path='*' element={<Home />} />
       </Routes>
     </main>

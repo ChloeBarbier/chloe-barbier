@@ -1,61 +1,10 @@
-const projects = {
-    myCV: { id: 0, label: "Mon site web", name: "myCV" },
-    laBam: { id: 1, label: "La boîte à mots", name: "laBam" },
-    desking360: { id: 2, label: "Desking 360", name: "desking360" },
-    uikit: { id: 3, label: "Ui-kit", name: "uikit" },
-    drawing: { id: 4, label: "Drawing", name: "drawing" },
-    solargraf: { id: 5, label: "Solargraf", name: "solargraf" },
-    roofgraf: { id: 6, label: "Roofgraf", name: "roofgraf" },
-    drawMyRoof: { id: 7, label: "Draw my roof", name: "drawMyRoof" },
-    algoEfficiencia: { id: 8, label: "Algorithme de prévision énergétique", name: "algoEfficiencia" },
-    mangalHostel: { id: 9, label: "Mangal Hostel", name: "mangalHostel" },
-    dealsWidget: { id: 10, label: "Deals Widget", name: "dealsWidget" },
-    offerSheetWidget: { id: 11, label: "Offer Sheet Widget", name: "offerSheetWidget" },
-    tradeInWidget: { id: 12, label: "Trade-in Widget", name: "tradeInWidget" },
-    quotesWidget: { id: 13, label: "Quotes Widget", name: "quotesWidget" },
-};
-
-const tools = {
-    javascript: { id: 0, label: "javascript", name: "javascript" },
-    reactjs: { id: 1, label: "react.js", name: "reactjs" },
-    nodejs: { id: 2, label: "node.js", name: "nodejs" },
-    redux: { id: 3, label: "redux", name: "redux" },
-    sql: { id: 4, label: "sql", name: "sql" },
-    paperjs: { id: 5, label: "paper.js", name: "paperjs" },
-    materialUi: { id: 6, label: "material-ui", name: "materialUi" },
-    git: { id: 7, label: "git", name: "git" },
-    agile: { id: 8, label: "agile", name: "agile" },
-    wix: { id: 9, label: "wix", name: "wix" },
-    firebase: { id: 10, label: "firebase", name: "firebase" },
-    cicd: { id: 11, label: "ci/cd", name: "cicd", labelLong: "Intégration continue, déploiement continu" },
-    htmlcss: { id: 12, label: "html/css", name: "htmlcss" },
-    scss: { id: 13, label: "scss", name: "scss" },
-    angular: { id: 14, label: "angular", name: "angular" },
-    github: { id: 15, label: "github", name: "github" },
-    gitlab: { id: 16, label: "gitlab", name: "gitlab" },
-    hooks: { id: 17, label: "hooks", name: "hooks" },
-    database: { id: 18, label: "base de données", name: "database" },
-    devops: { id: 19, label: "devops", name: "devops" },
-    algorithmic: { id: 20, label: "algorithmique", name: "algorithmic" },
-    thermodynamics: { id: 21, label: "thermodynamique", name: "thermodynamics" },
-    cplusplus: { id: 22, label: "c++", name: "cplusplus" },
-    POO: { id: 23, label: "P.O.O.", name: "POO", labelLong: "Programmation orientée objet" },
-    unitTests: { id: 24, label: "tests unitaires", name: "unitTests" },
-    RD: { id: 25, label: "R&D", name: "RD", labelLong: "recherche & développement" },
-    integrationTests: { id: 26, label: "tests d'intégration", name: "integrationTests" },
-    binaryProcessing: { id: 27, label: "traitement binaire", name: "binaryProcessing" },
-    avionics: { id: 28, label: "aéronautique", name: "avionics" },
-    spatial: { id: 29, label: "spatial", name: "spatial" },
-    instrumentation: { id: 30, label: "instrumentation", name: "instrumentation" },
-    labview: { id: 31, label: "labview", name: "labview" },
-    sensors: { id: 32, label: "capteurs", name: "sensors" },
-    electronics: { id: 33, label: "électronique", name: "electronics" },
-    dataAcquisition: { id: 34, label: "acquisition de données", name: "dataAcquisition" },
-};
+import { tools } from './tools';
+import { allProjects as projects } from './projects';
+import { experienceIds }  from "./ids";
 
 export const experience = [
     { 
-        id: '0', 
+        id: experienceIds.freelance22,
         to: "https://github.com/ChloeBarbier",
         website: "github.com",
         company: "Indépendante", 
@@ -64,12 +13,11 @@ export const experience = [
         // date: "août 2021 - maintenant",
         duration: "1 an et 2 mois",
         location: "France, Espagne",
-        // photo: 'work.jpg',
         photo: 'freelance-modified.png',
         text: "Développement d'applications web. Conseil. Développement de projets personnels.",
         projects: [
             projects.desking360,
-            projects.myCV, 
+            projects.portfolio, 
             projects.laBam,
         ],
         tools: [
@@ -83,7 +31,7 @@ export const experience = [
         ],
     },
     { 
-        id: '1', 
+        id: experienceIds.sm360, 
         to: "https://360.agency",
         website: "360.agency",
         company: "Solutions Medias 360", 
@@ -91,7 +39,7 @@ export const experience = [
         date: "2019 . 2021",
         // date: "août 2019 - août 2021",
         duration: "2 ans",
-        location: "Montréal CANADA",
+        location: "Montréal Canada",
         photo: 'sm360-modified.png', 
         text: "Développement et maintien de solutions web. Revue de code. Développement d’une librairie UI en kit. Intégration de nouveaux modules en React. Management Agile Scrum.",
         projects: [
@@ -101,6 +49,8 @@ export const experience = [
             projects.offerSheetWidget,
             projects.tradeInWidget,
             projects.quotesWidget,
+            projects.creditApplicationWidget,
+            projects.contactWidget,
         ],
         tools: [
             tools.reactjs, 
@@ -117,7 +67,7 @@ export const experience = [
         ],
     },
     { 
-        id: '2', 
+        id: experienceIds.freelance19,
         to: "https://github.com/ChloeBarbier",
         website: "github.com",
         company: "Indépendante", 
@@ -125,7 +75,7 @@ export const experience = [
         date: "2019",
         // date: "janvier 2019 - juillet 2019",
         duration: "8 mois",
-        location: "Barranquilla, COLOMBIE",
+        location: "Barranquilla, Colombie",
         photo: 'freelance-modified.png',
         text: "Travail sur de l'intégration de nouvelles pages du site web d'un hotel, maintien de certaines fonctionnalités, correction de bugs. D'autre part, développement de projets personnels.",
         projects: [
@@ -140,7 +90,7 @@ export const experience = [
         ],
     },
     { 
-        id: '3', 
+        id: experienceIds.sofdesk, 
         to: "https://enphase.com", 
         website: "enphase.com", 
         company: "Sofdesk", 
@@ -148,14 +98,14 @@ export const experience = [
         date: "2017 . 2018",
         // date: "mai 2017 - déc. 2018",
         duration: "1 an 8 mois",
-        location: "Montréal CANADA",
+        location: "Montréal, Canada",
         photo: 'sofdesk-modified.png', 
-        text: "Développeuse web chez Enphase Energy Canada Holdings (anciennement Sofdesk). Recherche, développement et maintien du module de dessin (Drawing) des applications web, Géométrie dans l'espace, Revue de code, Management Agile Scrum.",
+        text: "Développeuse web chez Sofdesk (depuis devenue 'Enphase Energy Canada Holdings'). Recherche, développement et maintien du module de dessin (Drawing) des applications web, Géométrie dans l'espace, Revue de code, Management Agile Scrum.",
         projects: [
             projects.drawing, 
             projects.solargraf,
             projects.roofgraf,
-            projects.drawMyRoof,
+            // projects.drawMyRoof,
         ],
         tools: [
             tools.agile, 
@@ -172,7 +122,7 @@ export const experience = [
         ],              
     },
     { 
-        id: '4', 
+        id: experienceIds.efficiencia,
         to: "https://www.linkedin.com/company/efficiencia/about/", 
         website: "efficiencia", 
         company: "Efficiencia", 
@@ -180,11 +130,11 @@ export const experience = [
         date: "2014 . 2015",
         // date: "avril 2014 - juillet 2015",
         duration: "1 an 4 mois",
-        location: "Toulouse FRANCE",
+        location: "Toulouse, France",
         photo: 'efficiencia-modified.png', 
         text: "Recherche et développement dans le domaine de l’efficacité énergétique des bâtiments. Développement en C++ d'un algorithme de simulation thermique pour la prévision énergétique. En partenariat avec la SCLE-SFE filiale d'EDF.",
         projects: [
-            projects.algoEfficiencia,
+            // projects.algoEfficiencia,
         ],
         tools: [
             tools.RD,
@@ -197,7 +147,7 @@ export const experience = [
         ], 
     },
     { 
-        id: '5', 
+        id: experienceIds.sogeti,
         to: "https://www.sogeti.com/", 
         website: "sogeti.com", 
         company: "Sogeti High Tech", 
@@ -205,7 +155,7 @@ export const experience = [
         date: "2013",
         // date: "janvier 2013 - juin 2013",
         duration: "6 mois",
-        location: "Toulouse FRANCE",
+        location: "Toulouse, France",
         photo: 'sogeti-modified.png', 
         text: "Stage de fin d'études en génie physique. Développement informatique. Instrumentation des essais en vol dans le domaine de l'aéronautique.",
         projects: [
@@ -220,7 +170,7 @@ export const experience = [
         ],
     },
     { 
-        id: '5', 
+        id: experienceIds.intespace,
         to: "https://www.aerocontact.com/entreprise-aeronautique/societe-intespace-1092/presentation", 
         website: "intespace",
         company: "Intespace", 
@@ -228,7 +178,7 @@ export const experience = [
         date: "2013",
         // date: "janvier 2013 - juin 2013",
         duration: "6 mois",
-        location: "Toulouse FRANCE",
+        location: "Toulouse, France",
         photo: 'intespace-modified.png', 
         text: "Stage en développement informatique dans le domaine de l'aérospatial. Instrumentation sur des satellites.",
         projects: [

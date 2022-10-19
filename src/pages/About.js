@@ -1,4 +1,4 @@
-import Title from './Title';
+import Title from '../components/Title';
 
 const introduction = 
  'Je suis développeuse web, active professionnellement depuis plusieurs années, je travaille essentiellement'
@@ -24,27 +24,22 @@ const About = () => {
             <div className='text'>
               <span>Bonjour, Hi !</span>
             </div>
-            <br />
             <div className='text'>
               <img className="img-bracket" src="/assets/img/about/about-bracket.png" alt="icon" />
               <span>{introduction}</span>
             </div>
-            <br />
             <div className='text'>
               <img className="img-rocket" src="/assets/img/about/about-rocket.png" alt="icon" />
               <span>{engineer}</span>
             </div>
-            <br />
             <div className='text'>
               <img className="img-daily" src="/assets/img/about/about-daily.png" alt="icon" />
               <span>{daily}</span>
             </div>
-            <br />
             <div className='text'>
               <img className="img-pin" src="/assets/img/about/about-pin.png" alt="icon" />
               <span>{nowadays}</span>
             </div>
-            <br />
             <a className="text contact-page-link grid-x align-bottom align-center" href="/contact">
               <div className='cell shrink'>
                 <img className="img-crystal" src="/assets/img/about/about-crystal.png" alt="icon" />
@@ -54,7 +49,6 @@ const About = () => {
               </div>
             </a>
           </div>
-         
         </div>
       </div>
     </div>
