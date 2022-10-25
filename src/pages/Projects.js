@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 // import { TabItem } from 'react-foundation';
+import { BsFillGrid3X3GapFill } from 'react-icons/bs';
+import { FaList } from 'react-icons/fa';
 import { projects }  from "../data/projects";
 import Title from '../components/Title';
 import Grid from '../components/Grid';
 import List from '../components/List';
+import CollapseButton from '../components/CollapseButton';
+import ExpandButton from '../components/ExpandButton';
 
-const list = "Liste";
-const grid = "Grille";
 const project = "Projets";
 
 const Projects = () => {
@@ -45,14 +47,16 @@ const Projects = () => {
           <div className='cell auto buttons'>
             <div className='buttons-content'>
               {!isListed 
-              ? <button className="button-expander" onClick={onClickList}>
-                <img className="icon" src="/assets/img/projects/icon_grid_list.png" alt="icon" />
-                {list}
+              ? <button className="button-list" onClick={onClickList}>
+                <FaList />
               </button>
-              : <button className="button-collapser" onClick={onClickGrid}>
-                <img className="icon" src="/assets/img/projects/icon_grid.png" alt="icon" />
-                {grid}
-              </button>
+              : <>
+                <ExpandButton />
+                <CollapseButton />
+                <button className="button-grid" onClick={onClickGrid}>
+                  <BsFillGrid3X3GapFill />
+                </button>
+              </>
               }
             </div>
           </div>

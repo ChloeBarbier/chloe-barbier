@@ -1,4 +1,11 @@
 import React from 'react';
+import { TfiWorld } from 'react-icons/tfi';
+import { MdLocationOn } from 'react-icons/md';
+import { GiLaurels } from 'react-icons/gi';
+import { RiMedal2Fill } from 'react-icons/ri';
+
+import CollapseButton from '../components/CollapseButton';
+import ExpandButton from '../components/ExpandButton';
 import { education }  from "../data/education";
 
 import Title from '../components/Title';
@@ -21,23 +28,6 @@ const Experience = () => {
     }
   }
 
-  const onExpandAll = () => {
-    var accordions = document.getElementsByClassName('accordion');
-    var panels = document.getElementsByClassName('panel');
-    var signs = document.getElementsByClassName('sign');
-    for (var i = 0; i < accordions.length; i++) accordions.item(i).classList.add('active');
-    for (var j = 0; j < panels.length; j++) panels.item(j).style.display = "unset";
-    for (var k = 0; k < signs.length; k++) signs.item(k).textContent = "-";
-  }
-  const onCollapseAll = () => {
-    var accordions = document.getElementsByClassName('accordion');
-    var panels = document.getElementsByClassName('panel');
-    var signs = document.getElementsByClassName('sign');
-    for (var i = 0; i < accordions.length; i++) accordions.item(i).classList.remove('active');
-    for (var j = 0; j < panels.length; j++) panels.item(j).style.display = "none";
-    for (var k = 0; k < signs.length; k++) signs.item(k).textContent = "+";
-  }
-
   return (
     <div className='container education'>
       <div className="grid-y">
@@ -47,8 +37,8 @@ const Experience = () => {
           </div>
           <div className='cell auto buttons'>
             <div className='buttons-content'>
-              <button className="button-expander" onClick={onExpandAll}>Développer</button>
-              <button className="button-collapser" onClick={onCollapseAll}>Réduire</button>
+              <ExpandButton />
+              <CollapseButton />
             </div>
           </div>
         </div>
@@ -74,39 +64,22 @@ const Experience = () => {
                     
                     <div className='cell details grid-x'>
                       <div className="cell shrink grid-x location align-middle">
-                        <img className="cell shrink img-location icon" src="/assets/img/experience/location.png" alt="icon" />
+                        <MdLocationOn className="cell shrink svg-location icon" />
                         <div className="cell shrink">{item.location}</div>
                       </div>
                       <div className="cell shrink grid-x website align-middle">
-                        <img className="cell shrink img-website icon" src="/assets/img/experience/website.png" alt="icon" />
+                        <TfiWorld className="cell shrink svg-website icon" />
                         <div className="cell shrink">
                           <a key={key} href={item.to} target="_blank" className="row grid-x" rel="noreferrer">{item.website}</a>
                         </div>
                       </div>
-                     {item.prize ?
+                     {item.prize &&
                      <div className="cell shrink grid-x prize align-middle">
                         <img className="cell shrink img-prize icon" src="/assets/img/experience/prize.png" alt="icon" />
                         <div className="cell shrink">{item.prize}</div>
-                      </div> : null}
+                      </div>}
                     </div>
-
                     <div className="cell text">{item.text}</div>
-
-                    {/* <div className='cell tags tools'>
-                      {item.tools.map((tool, i) => {
-                        return (
-                          <span key={`${key}-tool-${i}`} className='tag tool col1'>{tool.label}</span>
-                        );
-                      })}
-                    </div>
-
-                    <div className='cell tags projects'>
-                      {item.projects.map((project, i) => {
-                        return (
-                          <span key={`${key}-project-${i}`} className='tag project'>{project.label}</span>
-                        );
-                      })}
-                    </div> */}
                   </div>
 
                   <div className="cell small-3 photo">

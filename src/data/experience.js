@@ -1,6 +1,6 @@
 import { tools } from './tools';
 import { allProjects as projects } from './projects';
-import { experienceIds }  from "./ids";
+import { experienceIds }  from "../enums/Ids";
 
 export const experience = [
     { 
@@ -61,6 +61,7 @@ export const experience = [
             tools.nodejs,
             tools.htmlcss,
             tools.scss,
+            tools.atomicDesign,
             tools.agile,
             tools.angular,
             tools.integrationTests,

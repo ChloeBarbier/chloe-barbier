@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'foundation-sites/dist/css/foundation.min.css';
+import './i18n';
 import { Provider } from './config/state.manager';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'foundation-sites/dist/css/foundation.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -12,7 +12,7 @@ export const tools = {
     firebase: { id: 10, label: "firebase", name: "firebase" },
     cicd: { id: 11, label: "ci/cd", name: "cicd", labelLong: "Intégration continue, déploiement continu" },
     htmlcss: { id: 12, label: "html/css", name: "htmlcss" },
-    scss: { id: 13, label: "scss", name: "scss" },
+    scss: { id: 13, label: "sass", name: "scss" },
     angular: { id: 14, label: "angular", name: "angular" },
     github: { id: 15, label: "github", name: "github" },
     gitlab: { id: 16, label: "gitlab", name: "gitlab" },
@@ -39,4 +39,5 @@ export const tools = {
     jest: { id: 37, label: "jest", name: "jest" },
     geometry: { id: 37, label: "géométrie 2D/3D", name: "geometry" },
     design: { id: 38, label: "design", name: "design" },
+    atomicDesign: { id: 38, label: "atomic design", name: "atomicDesign" },
 };

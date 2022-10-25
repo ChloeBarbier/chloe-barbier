@@ -1,5 +1,5 @@
 import { tools } from './tools';
-import { experienceIds, projectsIds }  from "./ids";
+import { experienceIds, projectsIds }  from "../enums/Ids";
 
 export const allProjects = {
   portfolio: { id: 0, idRef: projectsIds.portfolio, label: "mon portfolio", name: "portfolio" },
@@ -27,10 +27,13 @@ export const projects = [
       photo: 'desking.png',  
       name: "Desking 360",
       text: 'Application web Next.js qui est un gestionnaire de soumissions d\'achat de véhicules en ligne',
-      related: '360.agency',
+      related: 'Solutions Medias 360',
       relatedId: experienceIds.sm360,
       to: "https://360.agency/en/solutions-for-dealership/customer-relationship-management/desking-360-sales-tools/",
       website: "desking-360-sales-tools",
+      videos: [
+        {title: "Vidéo", link: "https://www.youtube.com/watch?v=0rXpDsIA-xA&list=PLzJmUF3j0ffr8kkfu9KCtFBI-FcEjhs0X&index=10"}
+      ],
       repo: null,
       tools: [
         tools.javascript, 
@@ -43,9 +46,9 @@ export const projects = [
       role: "Développement de nouvelles fonctionnalités et maintien de l'application Desking360 en équipe Agile.",
       description:
         'Desking360 est un gestionnaire de soumissions innovant d\'achat de véhicules en ligne, du choix de la marque et du modèle, jusqu\'à la livraison à domicile.'
-        +' \nCette application est utilisée par les concessionnaires automobiles sur le marché nord-américain.'
-        +' \nLes clients peuvent accéder aux véhicules enregistrés dans leur « garage virtuel », et valider la transaction en ligne.'
-        +' \nL\'application est faite avec Next.js, elle est embarquée dans le CRM (application web CRM360 en Angular)',
+        +'\nCette application est utilisée par les concessionnaires automobiles sur le marché nord-américain.'
+        +'\nLes clients peuvent accéder aux véhicules enregistrés dans leur « garage virtuel », et valider la transaction en ligne.'
+        +'\nL\'application est faite avec Next.js, elle est embarquée dans le CRM (application web CRM360 en Angular)',
     },
     { 
       id: projectsIds.widgets,
@@ -53,8 +56,8 @@ export const projects = [
       thumbnail: 'widgets.png', 
       photo: 'widgets.png', 
       name: "Widgets 360", 
-      text: "Six différents modules en React.js intégrés aux applications web de 360.agency",
-      related: '360.agency',
+      text: "Six différents modules en React.js implémentées dans les applications web de Solutions Medias 360",
+      related: 'Solutions Medias 360',
       relatedId: experienceIds.sm360,
       to: "https://360.agency/en/solutions-for-dealership/customer-relationship-management/desking-360-sales-tools/",
       website: "desking-360-sales-tools",
@@ -69,18 +72,17 @@ export const projects = [
         tools.agile,
         tools.axios,
       ],
-      role: 
-        '★ Conception, développement, intégration et déploiement de nouveaux modules indépendants:'
-        +' \n Quotes widget: listing des soumissions, tri, filtres, recherche.'
-        +' \n Credit Application widget: formulaire d\'application pour une demande de crédit banquaire.'
-        +' \n Deals widget: listing des ventes, tri, filtres, recherche.'
-        +' \n Offer Sheet widget: récapitulatif des détails de l\'offre, prêt à l\'impression papier.'
-        +' \n Trade-in widget: module destiné à un véhicule d\'échange pour intégrer sa valeur de reprise sur l\'achat d\'un nouveau véhicule.'
-        +' \n Contact widget: listing de tous les contacts et fiche détaillés par contact.',
+      role: 'Conception, développement, implémentation et déploiement de 6 nouveaux modules indépendants.',
       description: 
-        '★ Les widgets on été développés en React.js à partir de templates.'
-        +' \n◾ Applications React.js embarquées dans Desking360 et CRM360'
-        +' \n◾ Architecture développée à partir du boilerplate Razzle (application SSR)'
+        `Les applications on été développés en React.js à partir de templates, et sont embarquées dans Desking360 et CRM360.
+        \nL'architecture de ces widgets a été développée à partir du boilerplate Razzle (application SSR).`,
+      subprojects: 
+        '► Quotes widget: listing des soumissions, tri, filtres, recherche.'
+        +'\n► Credit App. widget: formulaire d\'application pour une demande de crédit banquaire.'
+        +'\n► Deals widget: listing des ventes, tri, filtres, recherche.'
+        +'\n► Offer Sheet widget: récapitulatif de l\'offre, prêt à l\'impression.'
+        +'\n► Trade-in widget: intégration d\'un véhicule d\'échange avec valeur de reprise déduite.'
+        +'\n► Contact widget: listing de tous les contacts et fiche détaillée par contact.',
     },
     { 
       id: projectsIds.uikit, 
@@ -88,25 +90,24 @@ export const projects = [
       thumbnail: 'uikit.png', 
       photo: 'uikit.png', 
       name: "Ui-kit", 
-      text: "Module en React.js d'outils front-end en kit pour la standardisation du ui des applications web de 360.agency",
-      related: '360.agency',
+      text: "Module en React.js d'outils front-end pour la création d'une identité graphique",
+      related: 'Solutions Medias 360',
       relatedId: experienceIds.sm360,
-      to: "https://360.agency/en/solutions-for-dealership/customer-relationship-management/desking-360-sales-tools/",
-      website: "desking-360-sales-tools",
+      to: "https://atomicdesign.bradfrost.com/table-of-contents/",
+      website: "atomicdesign.bradfrost.com",
       repo: null,
       tools: [
+        tools.atomicDesign,
         tools.javascript,
         tools.reactjs,
         tools.hooks,
         tools.scss,
         tools.agile,
       ],
-      role: 
-        ' \n★ Développement et maintien du ui-kit:'
-        +' \n◾ Nouveaux composants UI, et maintien'
-        +' \n◾ Nouveaux designs et création de nouvelles maquettes en vue du développement des nouveaux widgets pour les applications Desking360 et CRM360.',
+      role: 'Développement et maintien de nouveaux composants UI. Développement de nouveaux designs et création de nouvelles maquettes en vue du développement des nouveaux widgets pour les applications Desking360 et CRM360.',
       description: 
-        'Le ui-kit est une librairie front-end développée pour un usage interne afin de standardiser les composants et le design au sein des applications et widgets de Solutions Médias 360.'
+        'Le ui-kit est une librairie front-end suivant les principes du Atomic Design. Il a été développé pour un usage interne afin de standardiser les composants et le design au sein des applications et widgets de Solutions Médias 360.'
+        +'Il permet de créer une identité graphique cohérente, évolutive et maintenable.'
         
     },
     { 
@@ -121,6 +122,10 @@ export const projects = [
       to: "https://www.solargraf.com/",
       website: "www.solargraf.com",
       repo: null,
+      videos: [
+        {title: "Drawing Roofgraf", link: "https://youtube.com/clip/Ugkxtoky8DkK05KJ4GMBPOykHJ1Eyp2J3Hi9"},
+        {title: "Drawing Solargraf", link: "https://youtube.com/clip/UgkxkXHnJm1wweeC39ueLkgYrYrD8Kyi2U1W"}
+      ],
       tools: [
         tools.javascript,
         tools.paperjs,
@@ -132,14 +137,14 @@ export const projects = [
         tools.agile,
       ],
       role: 
-        'J\'ai été en charge du développement et du maintien de cette application:'
-        +' \n◾ Recherche et développement de fonctionnalités, correction de bugs'
-        +' \n◾ Intégration du module au sein des applications.'
-        +' \n◾ mathématiques, géométrie dans l\'espace, algorithmique.',
+        'En charge du développement et du maintien de ce module:'
+        +' \n► Mathématiques, géométrie dans l\'espace, algorithmique.'
+        +' \n► Recherche et développement de fonctionnalités, correction de bugs.'
+        +' \n► Implémentation des nouvelles versions au sein des applications.',
       description: 
         'Le Drawing est le module de dessin intelligent des applications web de Sofdesk.'
-        +'\nSon algorithme est utile au cœur de l\'estimation des mesures de toit et de l\'installation de panneaux solaires.'
-        +'\nIl a été dévelopé avec Paper.js, qui est le couteau suisse du graphisme vectoriel.'
+        +'\nSon algorithme est utile au cœur de l\'estimation des mesures de toit et de l\'installation virtuelle de panneaux solaires.'
+        +'\nIl a été dévelopé avec Paper.js qui est le couteau suisse du graphisme vectoriel.'
     },
     { 
       id: projectsIds.roofgraf,
@@ -147,7 +152,7 @@ export const projects = [
       thumbnail: 'roofgraf.png', 
       photo: 'roofgraf.png', 
       name: "Roofgraf",
-      text: "Application web en React.js pour la mesure aérienne 3D précise de toitures. ",
+      text: "Application web en React.js pour la mesure aérienne 3D précise de toitures",
       related: 'Sofdesk',
       relatedId: experienceIds.sofdesk,
       to: "https://www.roofgraf.com/",
@@ -158,12 +163,14 @@ export const projects = [
         tools.reactjs,
         tools.materialUi
       ],
-      role: "Intégration continue du module de dessin et de ses nouvelles fonctionnalités.",
+      videos: [
+        {title: "Vidéo", link: "https://www.youtube.com/watch?v=JhKEUtrvgPA"}
+      ],
+      role: "Intégration continue du module de dessin et de ses nouvelles fonctionnalités au sein de Roofgraf. Participation également au développement front-end de l'application Roofgraf",
       description: 
-        'Roofgraf est une application web qui permet aux entreprises de couvreurs de toits d\'obtenir des mesures aériennes 3D précises et de créer des devis en quelques secondes.'
-        +' \nLe module de dessin (voir projet "drawing"), dont j\'ai été responsable, est un outil front-end intégré à l\'application qui permet d\'obtenir des mesures précises des toitures,'
-        +' \net de créer, construire et définir son projet. J\'ai également travaillé sur le développement front-end de l\'application Roofgraf.'
-        +' \n🎦 https://www.youtube.com/watch?v=7WNX_j3hoD4'
+        `Roofgraf est une application web qui permet aux entreprises de couvreurs de toits d'obtenir des mesures aériennes 3D précises et de créer des devis en quelques secondes.
+        \nLe module de dessin (cf. "drawing") est un outil front-end intégré à l'application qui permet d'obtenir des mesures précises des toitures,
+        et de créer, construire et définir son projet.`
     },
     { 
       id: projectsIds.solargraf,
@@ -171,20 +178,25 @@ export const projects = [
       thumbnail: 'solargraf.png', 
       photo: 'solargraf.png',
       name: "Solargraf", 
-      text: "Application web en React.js pour l'installation de panneaux solaires sur les toitures. ",
+      text: "Application web en React.js pour l'installation de panneaux solaires sur les toitures",
       related: 'Sofdesk',
       relatedId: experienceIds.sofdesk,
       to: "https://www.solargraf.com/",
       website: "www.solargraf.com",
+      videos: [
+        {title: "Vidéo", link: "https://www.youtube.com/watch?v=N5b4H6yQXWE"}
+      ],
       repo: null,
       tools: [
         tools.javascript,
         tools.reactjs,
       ],
-      role: "Intégration continue du module de dessin et de ses nouvelles fonctionnalités.",
+      role: "Intégration continue du module de dessin et de ses nouvelles fonctionnalités au sein de Solargraf.",
       description: 
         'Solargraf est une application web accélératrice de ventes SaaS pour les installateurs de panneaux solaires aux États-Unis et au Canada.'
-        +' \nLes utilisateurs gèrent leurs projets, créent et envoient des devis, développent leur clientèle et leurs ventes.'
+        +'\nLes utilisateurs gèrent leurs projets, créent et envoient des devis, développent leur clientèle et leurs ventes.'
+        +'\nLe module de dessin (cf. "drawing") est un outil front-end intégré à l\'application qui permet d\'installer virtuellement des pannaux solaires,'
+        +' afin d\'analyser, calculer et ainsi créer et définir son projet.'
     },
     { 
       id: projectsIds.labam,
@@ -192,9 +204,9 @@ export const projects = [
       thumbnail: 'labam.png', 
       photo: 'labam.png', 
       name: "La boîte à mots", 
-      text: "Application web en React.js qui invente des mots inexistants à l'infini.", 
+      text: "Application web en React.js qui invente des mots inexistants à l'infini", 
       related: 'projet personnel',
-      relatedId: experienceIds.freelance22,
+      // relatedId: experienceIds.freelance22,
       to: "https://la-bam-79775.firebaseapp.com/",
       website: "la-bam-79775.firebaseapp.com",
       repo: "https://github.com/ChloeBarbier/la-bam",
@@ -210,28 +222,19 @@ export const projects = [
       ],
       role: "Projet entier",
       description:
-        ''
-        +' \nL\'idée finale étant la fabrication et le design d\'un objet conceptuel mêlant art, électronique et informatique.'
-        +' \n★ Le concept : '
-        +' \nChoisis une langue, choisis des paramètres comme une sonorité, une originalité, et obtiens des mots nouveaux'
-        +' \n★ La boîte (l\'idée) : '
-        +' \n- La boîte à mots invente son propre vocabulaire et le partage avec vous sur un petit écran LCD'
-        +' \n- Micro-contrôleur, programmation Arduino, électronique'
-        +' \n- Design extérieur en bois par les architectes et designers Sorion @ateliersorion'
-        +' \n★ L\'application web'
-        +' \n- JavaScript, React, Redux, Node.js, Material-ui'
-        +' \n- Connexion et sauvegarde des mots avec Firebase'
-        +' \n🎯 Actuellement je travaille sur l\'amélioration de l\'algorithme de génération en JavaScript, les aspects base de données avec Firebase, ainsi que sur les aspects UI.',
+        'Le concept original de la boîte à mots est de choisir un dictionnaire (càd. une liste de mots) et des paramètres pour obtenir des mots nouveaux.'
+        +'\nActuellement l\'application web invente des prénoms, elle intègre donc pour le moment un seul dictionnaire. Elle est faite en React.js, et la connexion et la sauvegarde des mots sur un compte utilisateur ont été développées avec Firebase.'
+        +'\nLes prochains objectifs sont l\'amélioration de l\'algorithme de génération (notamment pour l\'intégration de paramètres comme l\'originalité, la sonorité), les aspects base de données avec Firebase, et enfin les aspects UI/UX.',
     },
     { 
       id: projectsIds.portfolio,
       date: "2022",
       thumbnail: 'monsiteweb.png', 
       photo: 'monsiteweb.png', 
-      name: "Chloé B. - Dév. web", 
-      text: "Application web en React.js qui présente mon curriculum vitae.",
-      related: 'Mon site web',
-      relatedId: experienceIds.freelance22,
+      name: "Chloé Barbier", 
+      text: "Application web en React.js.",
+      related: 'projet personnel',
+      // relatedId: experienceIds.freelance22,
       to: 'https://chloe.barbier.com',
       website: 'chloe.barbier.com',
       repo: "https://github.com/ChloeBarbier/chloe-barbier",
@@ -247,8 +250,8 @@ export const projects = [
       ],
       role: "Projet entier",
       description:
-      'Application web full React.js, développée dans le but de présenter mon expertise et mon savoir-faire. Elle est construite à partir de du boilerplate create-react-app.'
-      +' \nL\'application est open-SourceBuffer, le code est donc accessible et visible par tous sur Github <a>Link</>.'
+      'Application web en React.js, construite à partir du boilerplate create-react-app.'
+      +'\nLe code est accessible sur Github.'
     },
     { 
       id: projectsIds.mangal,
@@ -257,7 +260,7 @@ export const projects = [
       photo: 'mangal.png', 
       name: "Mangal Hostel", 
       text: "Site web wix de l'hôtel Mangal sur la côte colombienne des Caraïbes.",
-      related: 'Mangal Hostel',
+      related: 'Indépendante',
       relatedId: experienceIds.freelance19,
       to: 'https://mangalhostel.wixsite.com/mysite',
       website: 'mangalhostel.wixsite.com',
@@ -266,8 +269,8 @@ export const projects = [
         tools.wix,
         tools.design
       ],
-      role: "Le site web déjà existant et intégré sur la plateforme WIX, a été débuggée, rafraichie et redesignée par mes soins en respectant des attentes particulières de design et d'expérience utilisateur.",
-      description: "Site web wix de l'hôtel Mangal, situé à Dibulla sur la côte colombienne des Caraïbes, a subi une refonte et un rafraichissement intégral."
+      role: "Le site web, déjà existant sur la plateforme WIX, a été maintenu et mis à jour par mes soins. Le design a subi une refonte partielle respectant des exigences graphiques spécifiques.",
+      description: "Site web wix de l'hôtel Mangal, situé à Dibulla sur la côte colombienne des Caraïbes, a subi une refonte et un rafraichissement."
     },
   ];
 

@@ -1,0 +1,13 @@
+{
+    "common": {
+        "translate-button": "EN",
+        "translated-text": "This is english"
+    },
+    "nav": {
+        "experience": "Experience",
+        "education": "Education",
+        "projects": "Projects",
+        "about": "About",
+        "contact": "Contact"
+    }
+}
