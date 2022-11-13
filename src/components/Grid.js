@@ -1,7 +1,8 @@
 import React from 'react';
-
-const Grid = ({onClickProject, projects}) => {
-
+import { projects }  from "../data/projects";
+import { useTranslation } from "react-i18next";
+const Grid = ({onClickProject}) => {
+    const { t } = useTranslation();
     return (
         <div className="projects-grid grid-x">
         {projects.map(obj => (
@@ -15,7 +16,7 @@ const Grid = ({onClickProject, projects}) => {
             <button onClick={() => onClickProject(obj.id)}>
                 <div className="project-overlay">
                 <div className="text">
-                    {obj.text}
+                    {t(obj.text)}
                 </div>
                 </div>
             </button>

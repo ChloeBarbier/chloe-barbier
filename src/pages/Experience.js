@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from "react-i18next";
+import { Link, useSearchParams } from 'react-router-dom';
 import { TfiWorld } from 'react-icons/tfi';
 import { MdLocationOn } from 'react-icons/md';
 import { experience }  from "../data/experience";
 import CollapseButton from '../components/CollapseButton';
 import ExpandButton from '../components/ExpandButton';
 import Title from '../components/Title';
+import { getNewSearchParams } from '../tools';
 
 const Experience = () => {
+  const { t } = useTranslation();
+  let [searchParams] = useSearchParams({});
 
-  const onClickExperience = (experienceId) => {
+  const onClickAccordion = (experienceId) => {
     var button = document.getElementById(`button-${experienceId}`);
     var panel = document.getElementById(`panel-${experienceId}`);
     var sign = document.getElementById(`sign-${experienceId}`);
@@ -24,28 +29,24 @@ const Experience = () => {
     }
   }
 
-  const onClickProject = (id) => {
-    window.location.href = `/projects?view=list&projectId=${id}`;
-  }
-
   useEffect(() => {
-    var url = new URL(window.location.href);
-    var experienceId = url.searchParams.get("experienceId");
-
-    if (experienceId?.length > 0) {
-      onClickExperience(experienceId);
+    // if experienceId open section and scroll to it
+    const experienceId = searchParams.get('experienceId');
+    if (experienceId) {
       var element = document.getElementById(`button-${experienceId}`);
-      element?.scrollIntoView();
+      if (element) {
+        onClickAccordion(experienceId);
+        element.scrollIntoView();
+      }
     }
-  }, [])
+  }, [searchParams])
 
   return (
     <div className='container experience'>
       <div className="grid-y">
         <div className='top-page grid-x'>
           <div className='cell auto page-title'>
-            <Title text="Expérience" />
-            {/* <Title text="Expérience professionnelle" /> */}
+            <Title text={t('nav.experience')} />
           </div>
           <div className='cell auto buttons'>
             <div className='buttons-content'>
@@ -57,14 +58,17 @@ const Experience = () => {
         {experience.map((item, key) => {
           return (
             <React.Fragment key={key}>
-              <button className="accordion" id={`button-${item.id}`} onClick={() => onClickExperience(item.id)}>
+              <button className="accordion" id={`button-${item.id}`} onClick={() => onClickAccordion(item.id)}>
                 <div className="grid-x align-middle">
                   <div className='title small-8'>
-                    <span className='job-position'>{item.position}</span>
-                    <span className='company'> @{item.company}</span>
+                    <span className='job-position'>{t(item.position)}</span>
+                    <span className='company'> @{t(item.company)}</span>
                   </div>
                   <div className='date small-4'>
-                    {item.date}
+                    {item.date.length === 2 
+                    ? item.date[0] + " . " + t(item.date[1])
+                    : item.date[0]
+                    }
                     <span className='sign' id={`sign-${item.id}`}>+</span>
                   </div>
                 </div>
@@ -77,7 +81,7 @@ const Experience = () => {
                     <div className='cell details grid-x'>
                       <div className="cell shrink grid-x location align-middle">
                         <MdLocationOn className="cell shrink svg-location icon" />
-                        <div className="cell shrink">{item.location}</div>
+                        <div className="cell shrink">{t(item.location)}</div>
                       </div>
                       <div className="cell shrink grid-x website align-middle">
                         <TfiWorld className="cell shrink svg-website icon" />
@@ -87,12 +91,12 @@ const Experience = () => {
                       </div>
                     </div>
 
-                    <div className="cell text">{item.text}</div>
+                    <div className="cell text">{t(item.text)}</div>
 
                     <div className='cell tags tools'>
                       {item.tools.map((tool, i) => {
                         return (
-                          <span key={`${key}-tool-${i}`} className='tag tool col1'>{tool.label}</span>
+                          <span key={`${key}-tool-${i}`} className='tag tool col1'>{t(tool.label)}</span>
                         );
                       })}
                     </div>
@@ -100,13 +104,16 @@ const Experience = () => {
                     <div className='cell tags projects'>
                       {item.projects.map((project, i) => {
                         return (
-                          <span 
+                          <Link 
                             key={`${key}-project-${project.id}`} 
-                            className='tag project' 
-                            onClick={() => onClickProject(project.idRef)}
+                            className='tag project'
+                            to={`/projects${getNewSearchParams({
+                              view: 'list',
+                              projectId: project.idRef,
+                            })}`}
                           >
                             {project.label}
-                            </span>
+                          </Link>
                         );
                       })}
                     </div>

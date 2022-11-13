@@ -1,4 +1,6 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
+
 import { TfiWorld } from 'react-icons/tfi';
 import { MdLocationOn } from 'react-icons/md';
 import { GiLaurels } from 'react-icons/gi';
@@ -11,6 +13,7 @@ import { education }  from "../data/education";
 import Title from '../components/Title';
 
 const Experience = () => {
+  const { t } = useTranslation();
 
   const onClick = (key) => {
     var button = document.getElementById(`button-${key}`);
@@ -33,7 +36,7 @@ const Experience = () => {
       <div className="grid-y">
         <div className='top-page grid-x'>
           <div className='cell auto page-title'>
-            <Title text="Formation" />
+            <Title text={t('nav.education')} />
           </div>
           <div className='cell auto buttons'>
             <div className='buttons-content'>
@@ -48,8 +51,8 @@ const Experience = () => {
               <button className="accordion" id={`button-${key}`} onClick={() => onClick(key)}>
                 <div className="grid-x align-middle">
                   <div className='title small-8'>
-                    <span className='job-position'>{item.graduation}</span>
-                    <span style={{marginTop: '1rem'}} className='company'> @{item.school}</span>
+                    <span className='job-position'>{t(item.graduation)}</span>
+                    <span style={{marginTop: '1rem'}} className='company'> @{t(item.school)}</span>
                   </div>
                   <div className='date small-4'>
                     {item.date}
@@ -65,7 +68,7 @@ const Experience = () => {
                     <div className='cell details grid-x'>
                       <div className="cell shrink grid-x location align-middle">
                         <MdLocationOn className="cell shrink svg-location icon" />
-                        <div className="cell shrink">{item.location}</div>
+                        <div className="cell shrink">{t(item.location)}</div>
                       </div>
                       <div className="cell shrink grid-x website align-middle">
                         <TfiWorld className="cell shrink svg-website icon" />
@@ -76,10 +79,17 @@ const Experience = () => {
                      {item.prize &&
                      <div className="cell shrink grid-x prize align-middle">
                         <img className="cell shrink img-prize icon" src="/assets/img/experience/prize.png" alt="icon" />
-                        <div className="cell shrink">{item.prize}</div>
+                        <div className="cell shrink">{t(item.prize)}</div>
                       </div>}
                     </div>
-                    <div className="cell text">{item.text}</div>
+                    <div className="cell text">{t(item.text)}</div>
+                    <div className='cell tags tools'>
+                      {item.tools?.map((tool, i) => {
+                        return (
+                          <span key={`${key}-tool-${i}`} className='tag tool col1'>{t(tool.label)}</span>
+                        );
+                      })}
+                    </div>
                   </div>
 
                   <div className="cell small-3 photo">

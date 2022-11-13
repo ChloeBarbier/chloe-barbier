@@ -1,48 +1,57 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Context } from './config/state.manager';
-import './App.scss';
+// import './App.scss';
 import { initialState } from './config/state.manager';
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { FaLinkedin } from 'react-icons/fa';
 import { BsTelephoneFill, BsGithub } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 import Main from './Main';
 import { useTranslation } from "react-i18next";
 import Lang from "./components/Lang";
+import { Language } from './enums/Language';
+import { getNewSearchParams } from './tools';
 
 const App = () => {
-  const { t } = useTranslation();
+  const [ searchParams ] = useSearchParams();
+  const { i18n, t } = useTranslation();
   const { state } = useContext(Context);
   const { homeIsActive } = state || initialState;
   const [isActive, setIsActive] = useState(homeIsActive);
+  const [lang, setLang] = useState(i18n.lng);
 
   useEffect(() => {
     setIsActive(homeIsActive === true);
   }, [homeIsActive]);
 
+  useEffect(() => {
+    var langParam = searchParams.get('lang');
+    if (langParam && langParam !== lang) {
+      setLang(langParam === Language.EN ? Language.EN : Language.FR);
+      i18n.changeLanguage(langParam === Language.EN ? Language.EN : Language.FR);
+    }
+  }, [searchParams, lang, i18n])
+
+  const newSearchParams = getNewSearchParams({});
+
   return (
-    <Router>
+    // <Router>
       <div className={`App ${isActive ? 'HomeIsActive' : ''}`}>
         <header className={`App-header ${isActive ? 'HomeIsActive' : ''}`}>
           <div className='content-header'>
             <div className='container'>
               <div className={`title ${isActive ? 'HomeIsActive' : ''}`}>
-                <Link className="main-title" to="/">
-                  {/* <img src="/assets/img/favicon.png" alt="icon" /> */}
-                  {/* <img src="/assets/img/bracket1.webp" alt="icon" /> */}
-                  {/* <img src="/assets/img/bracket2.png" alt="icon" /> */}
+                <Link className="main-title" to={`/${newSearchParams}`}>
                   <img className={`${isActive ? 'HomeIsActive' : ''}`} src="/assets/img/et2.png" alt="icon" />
-                  {/* Chloé Barbier */}
                 </Link>
               </div>
               <nav className={`menu ${isActive ? 'HomeIsActive' : ''}`}>
-                {/* <Link className="menu-item" to="/">Accueil</Link> */}
-                <Link className="menu-item" to="experience">{t('nav.experience')}</Link>
-                <Link className="menu-item" to="education">{t('nav.education')}</Link>
-                <Link className="menu-item" to="projects">{t('nav.projects')}</Link>
-                {/* <Link className="menu-item" to="about">{t('nav.about')}</Link> */}
-                <Link className="menu-item" to="contact">{t('nav.contact')}</Link>
-                <Lang />
+                <Link className="menu-item" to={`experience${newSearchParams}`}>{t('nav.experience')}</Link>
+                <Link className="menu-item" to={`education${newSearchParams}`}>{t('nav.education')}</Link>
+                <Link className="menu-item" to={`projects${newSearchParams}`}>{t('nav.projects')}</Link>
+                {/* <Link className="menu-item" to={`about${search}`}>{t('nav.about')}</Link> */}
+                <Link className="menu-item" to={`contact${newSearchParams}`}>{t('nav.contact')}</Link>
+                <Lang lang={lang} />
               </nav>
             </div>
           </div>
@@ -70,7 +79,7 @@ const App = () => {
           </div>
         </footer>
       </div>
-    </Router>
+    // </Router>
   );
 }
 

@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
+import { useTranslation } from "react-i18next";
 import { FaLinkedin } from 'react-icons/fa';
 import { BsTelephoneFill, BsGithub } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 import { TiBusinessCard } from 'react-icons/ti';
 import { myNumber, myEmail, myLinkedin, myGithub, myContact } from '../data/contact';
 
-const needInfo = "Besoin d'informations ?";
-const shareProject = "Envie de partager un projet ?";
-const contactMe = "Contactez-moi.";
-const copy = 'copier';
-const copied = "copiée!"
-const businessCard = 'Carte de visite';
-
 const BusinessCard = ({setisMouseHover, isMouseHover}) => {
-    const [isCopied, setisCopied] = useState(false);
+  const { t } = useTranslation();
+  const [isCopied, setisCopied] = useState(false);
 
     const copytoClipboard = (text) => {
         navigator.clipboard.writeText(text);
@@ -22,9 +17,9 @@ const BusinessCard = ({setisMouseHover, isMouseHover}) => {
 
     return (
         <div className="cell grid-y align-center align-self-stretch description">
-            <div className='cell text'><span>{needInfo}</span></div>
-            <div className='cell text'><span>{shareProject}</span></div>
-            <div className='cell text'><span>{contactMe}</span></div>
+            <div className='cell text'><span>{t('contact.businessCard.needInfo')}</span></div>
+            <div className='cell text'><span>{t('contact.businessCard.shareProject')}</span></div>
+            <div className='cell text'><span>{t('contact.businessCard.contactMe')}</span></div>
             <div className='cell text'>
             <div id="links" className="links">
 
@@ -32,10 +27,10 @@ const BusinessCard = ({setisMouseHover, isMouseHover}) => {
                 onMouseLeave={() => {setisCopied(false); setisMouseHover(false);}}
                 onMouseOver={() => setisMouseHover(true)}
                 onClick={() => copytoClipboard(myContact)} 
-                data-descr={isCopied ? copied : copy} 
+                data-descr={isCopied ? t('contact.businessCard.copied') : t('contact.businessCard.copy')} 
                 className={(isCopied ? 'isCopied' : '') + ' business-card grid-x align-middle'}>
                     <TiBusinessCard className="cell shrink social-media-icons"/>
-                    <span className="cell auto">{businessCard}</span>
+                    <span className="cell auto">{t('contact.businessCard.businessCard')}</span>
                 </div>
                 <br />
 

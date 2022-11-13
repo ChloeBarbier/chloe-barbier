@@ -1,35 +1,29 @@
-import React, { useState } from "react"
-import { useTranslation } from 'react-i18next';
+import React from "react"
+import PropTypes from 'prop-types';
 import { Language } from '../enums/Language';
+import { useSearchParams } from "react-router-dom";
  
-const Lang = () => {
-    const { i18n } = useTranslation();
-    const [lang, setLang] = useState(i18n.lng);
- 
-    let changeLanguage = () => {
-        // console.log(e)
-        // let language = ;
- 
-        switch (lang) {
-            case Language.EN:
-                setLang(Language.FR);
-                i18n.changeLanguage(Language.FR);
-                break;
-            case Language.FR:
-            default:
-                setLang(Language.EN);
-                i18n.changeLanguage(Language.EN);
-                break;
-        }
+const Lang = ({lang}) => {
+    let [searchParams, setSearchParams] = useSearchParams({});
+    const newLang = lang === Language.EN ? Language.FR : Language.EN;
+    
+    const onClick = () => {
+        searchParams.set('lang', newLang);
+        setSearchParams(searchParams);
     }
  
     return (
-        <div className="menu-item switch-language grid-x align-middle">
-            <div onClick={changeLanguage}>
-                {lang === Language.EN ? 'FR' : 'EN'}
-            </div>
+        <div onClick={onClick} className="menu-item switch-language grid-x align-middle">
+            {lang === Language.EN ? 'FR' : 'EN'}
         </div>
     )
 }
- 
+
+Lang.defaultProps = {
+    lang: Language.FR
+}
+    
+Lang.propTypes = {
+    lang: PropTypes.string
+}
 export default Lang;

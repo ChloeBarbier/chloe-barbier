@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { BiCollapse } from 'react-icons/bi';
 
-const CollapseButton = () => {
+const CollapseButton = ({onClickCollapse}) => {
 
     const onCollapseAll = () => {
         var accordions = document.getElementsByClassName('accordion');
@@ -9,6 +10,8 @@ const CollapseButton = () => {
         for (var i = 0; i < accordions.length; i++) accordions.item(i).classList.remove('active');
         for (var j = 0; j < panels.length; j++) panels.item(j).style.display = "none";
         for (var k = 0; k < signs.length; k++) signs.item(k).textContent = "+";
+
+        onClickCollapse();
     }
 
     return (
@@ -16,5 +19,12 @@ const CollapseButton = () => {
             <BiCollapse />
         </button>
     )
+}
+CollapseButton.defaultProps = {
+    onClickCollapse: () => {}
+}
+    
+CollapseButton.propTypes = {
+    onClickCollapse: PropTypes.func
 }
 export default CollapseButton;

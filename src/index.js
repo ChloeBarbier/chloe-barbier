@@ -6,11 +6,15 @@ import './i18n';
 import { Provider } from './config/state.manager';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from "react-router-dom";
+import './App.scss';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

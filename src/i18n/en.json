@@ -1,13 +1,244 @@
 {
-    "common": {
-        "translate-button": "EN",
-        "translated-text": "This is english"
-    },
     "nav": {
         "experience": "Experience",
         "education": "Education",
         "projects": "Projects",
         "about": "About",
         "contact": "Contact"
+    },
+    "home": {
+        "webdev": "Web developer",
+        "frontend": "front-end",
+        "engineer": "Engineer",
+        "physics": "physics"
+    },
+    "experience": {
+        "freelance": "Freelance",
+        "position": {
+            "webdev": "Front-end web developer",
+            "engineer": "R&D software engineer",
+            "engineerDev": "Software development engineer",
+            "engineerRD": "R&D software engineer"
+        },
+        "now": "now",
+        "text": {
+            "freelance22": "Web applications development. Consulting. Personal projects development.",
+            "sm360": "Web solutions development and maintenance. Code reviewing. Development of a ui library in kit. New reactjs modules integration. Management Agile Scrum.",
+            "freelance19": "New pages integration of a hostel website, support and maintenance of the existing, bug fixes. Personal projects development on the side.",
+            "sofdesk": "Research, development and maintenance of the webapp drawing module at Sofdesk (now 'Enphase Energy Canada Holdings'). Spatial geometry, peer code reviewing, management Agile Scrum.",
+            "efficiencia": "Research and development for building energy efficiency. Algorithm development in C++ for thermical simulation of energy forcasting. In partnership with SCLE-SFE, EDF subsidiary.",
+            "sogeti": "End-of-studies internship in physics engineering. Software development. Flight tests instrumentation in the aeronautical industry.",
+            "intespace": "Software development internship in the aerospatial industry. Instrumentation on satellites."
+        }
+    },
+    "tools": {
+        "javascript": "javascript",
+        "reactjs": "react.js",
+        "nodejs": "node.js",
+        "redux": "redux",
+        "sql": "sql",
+        "paperjs": "paper.js",
+        "materialUi": "material-ui",
+        "git": "git",
+        "agile": "agile",
+        "wix": "wix",
+        "firebase": "firebase",
+        "cicd": "ci/cd",
+        "htmlcss": "html/css",
+        "scss": "sass",
+        "angular": "angular",
+        "github": "github",
+        "gitlab": "gitlab",
+        "hooks": "hooks",
+        "database": "database",
+        "devops": "devops",
+        "algorithmic": "algorithmic",
+        "thermodynamics": "thermodynamics",
+        "cplusplus": "c++",
+        "POO": "P.O.O.",
+        "unitTests": "units tests",
+        "RD": "R&D",
+        "integrationTests": "integration tests",
+        "binaryProcessing": "binary processing",
+        "avionics": "aeronautics",
+        "spatial": "spatial",
+        "instrumentation": "instrumentation",
+        "labview": "labview",
+        "sensors": "sensors",
+        "electronics": "electronics",
+        "dataAcquisition": "data acquisition",
+        "nextjs": "next.js",
+        "axios": "axios",
+        "jest": "jest",
+        "geometry": "2D/3D geometry",
+        "webDesign": "web design",
+        "atomicDesign": "atomic design",
+        "webTemplate": "web template",
+        "videoEditing": "video editing",
+        "adobe": "adobe suite",
+        "php": "php",
+        "json": "json",
+        "android": "android",
+        "java": "java",
+        "physics": "physics",
+        "mathematics": "mathematics",
+        "programming": "programming",
+        "c": "c",
+        "arduino": "arduino",
+        "ada": "ada",
+        "xml": "xml",
+        "matlab": "matlab"
+    },
+    "location": {
+        "franceSpain": "France - Spain",
+        "montreal": "Montreal, Canada",
+        "barranquilla": "Barranquilla, Colombia",
+        "toulouse": "Toulouse, France",
+        "nottingham": "Nottingham, England"
+    },
+    "education": {
+        "school": {
+            "udem": "Université de Montréal",
+            "insa": "INSA of Toulouse",
+            "uni": "University of Nottingham",
+            "bellevue": "Lycée Bellevue"
+        },
+        "schoolLong": {
+            "udem": "Université de Montréal",
+            "insa": "National Institute of Applied Sciences in Toulouse",
+            "uni": "University of Nottingham",
+            "bellevue": "Lycée Bellevue"
+        },
+        "graduation": {
+            "udem": "Certificate in applied computer science",
+            "insa": "Master in physics engineering",
+            "uni": "Bachelor degree in physics",
+            "bellevue": "Preparatory classes for the \"Grandes Écoles\""
+        },
+        "prize": {
+            "udem": "Award of excellence",
+            "insa": "English TOEIC 825"
+        },
+        "text": {
+            "udem": "Applied computer science, multimedia, web design and integration. Programming, Web development.",
+            "insa": "Basic and applied sciences. Engineering and physics sciences. Instrumentation. Computer sciences. Hardware and software development.",
+            "uni": "Exchange programme in physics.",
+            "bellevue": "CPGE in advanced mathematics. Mathematics, Physics and Engineering Sciences (MPSI)."
+        }
+    },
+    "projects": {
+        "personalProject": "Personal project",
+        "video": "Video",
+        "repository": "Github repository",
+        "text": {
+            "desking": "React Web Application creating and managing quotes for online vehicle purchases",
+            "widgets": "Six different React modules implemented in Solutions Medias 360 web applications",
+            "uikit": "React module of front-end tools for the creation of a graphic identity",
+            "drawing": "Smart javascript drawing module for Solargraf and Roofgraf web applications",
+            "roofgraf": "React web application for precise 3D aerial measurement of roofs",
+            "solargraf": "React web application for the installation of solar panels on roofs",
+            "labam": "React web application that invents non-existent words ad infinitum",
+            "portfolio": "React web application",
+            "mangal": "Wix website of the Mangal hostel located on the Colombian Caribbean coast"
+        },
+        "role": {
+            "desking": [
+                "Development of new features and maintenance of the Desking360 application in an Agile team."
+            ],
+            "widgets": [
+                "Design, development, implementation and deployment from scratch of six independent modules."
+            ],
+            "uikit": [
+                "Development of new UI atoms (basic components) and new features, maintenance. New designs development and new templates creation for the new widgets of Desking360 and CRM360 applications."
+            ],
+            "drawing": [
+                "In charge of the development and maintenance of this module:",
+                "► Mathematics, solid geometry, algorithms.",
+                "► Research and features development, bug fixes.",
+                "► Implementation of new versions within React applications."
+            ],
+            "roofgraf":  [
+                "Continuous integration of the drawing module and its new functionalities within Roofgraf. Also participated in the front-end development of the Roofgraf application."
+            ],
+            "solargraf": [
+                "Continuous integration of the drawing module and its new functionalities within Solargraf."
+            ],
+            "labam": [
+                "Whole project"
+            ],
+            "portfolio": [
+                "Whole project"
+            ],
+            "mangal": [
+                "The website, already created on the WIX platform, has been maintained and updated. As for the design, it has undergone an almost total overhaul in keeping with its pre-existing graphic universe."
+            ]
+        },
+        "description": {
+            "desking": [
+                "Desking360 is an innovative quote manager for online vehicle purchases, from the choice of make and model, to home delivery.",
+                "This application is used by car dealerships in the North American market.",
+                "Customers can access registered vehicles in their 'virtual garage', and validate the transaction online.",
+                "The React application is made with Next.js and it is embedded in the CRM (CRM360 is an Angular.js web application)"
+            ],
+            "widgets": [
+                "The applications have been developed in React.js from templates, and are embedded in Desking360 and CRM360.",
+                "The architecture of these widgets was developed from the boilerplate Razzle (SSR application)."
+            ],
+            "uikit": [
+                "The ui-kit is a front-end library following the principles of the Atomic Design. It was developed for internal use in order to standardize the components and the design within the Solutions Médias 360 applications and widgets. It makes it possible to create a coherent, scalable and maintainable graphic identity."
+            ],
+            "drawing": [
+                "The Drawing module is the smart algorithm of Sofdesk web applications.",
+                "This module is useful at the heart of estimating roof measurements and virtual installation of solar panels.",
+                "It was developed with Paper.js which is the Swiss army knife of vector graphics."
+            ],
+            "roofgraf": [
+                "Roofgraf is a web-based application that allows roofing companies to get accurate 3D aerial measurements and create quotes in seconds.",
+                "The drawing module (see 'drawing' project) is a front-end tool integrated into the application which allows you to obtain precise measurements of roofs, and to create, build and define your project."
+            ],
+            "solargraf": [
+                "Solargraf is a SaaS sales accelerator web application for solar panel installers in the United States and Canada.",
+                "Users manage their projects, create and send quotes, grow their customer base and sales.",
+                "The drawing module (see 'drawing' project) is a front-end tool integrated into the application which allows to virtually install solar panels, in order to analyze, estimates and finally build your project with solar permits."
+            ],
+            "labam": [
+                "Basically, the original concept of la Bam (the word box) is to choose a dictionary (typically a list of words) and parameters to get new words.",
+                "Currently the web application invents first names, so for the moment it includes only one dictionary. It is made with React.js, and the backend side (the login and saving of words to a user account) was developed with Firebase.",
+                "The App is in continuous improvement, the next features are going to be on the generation algorithm (eg. integration of parameters such as originality, sound), then the database aspects with Firebase, and finally some UI/UX aspects."
+            ],
+            "portfolio": [
+                "React web application built from the create-react-app boilerplate.",
+                "The code is available on Github."
+            ],
+            "mangal": [
+                "Mangal Hostel located in Dibulla on the Colombian Caribbean coast, its website has undergone a major refresh."
+            ]
+        },
+        "subprojects": {
+            "widgets": [
+                "► Quotes widget: submissions listing, sorting, filters, search.",
+                "► Credit App. widget: application form for a bank loan application.",
+                "► Deals widget: sales listing, sorting, filters, search.",
+                "► Offer Sheet widget: summary of the offer, ready for printing and signing",
+                "► Trade-in widget: integration of an exchange vehicle with trade-in value deducted.",
+                "► Contact widget: contacts listing and detailed page by contact."
+            ]
+        }
+    },
+    "contact": {
+        "businessCard": {
+            "needInfo": "Need informations ?",
+            "shareProject": "Want to share a project?",
+            "contactMe": "Contact me.",
+            "copy": "copy",
+            "copied": "copied",
+            "businessCard": "Business card"
+        },
+        "about": {
+            "introduction": "I am a web developer, and for several years now I have been working mainly on front-end technologies. I expand my activities with design and web integration.",
+            "engineer": "Engineer in physics, I also have expertise on projects that require a scientific, mathematical approach.",
+            "nowadays": "I am currently a freelancer based in France. I work remotely, alone or in a team, in English and French.",
+            "contact": "Get in touch."
+        }
     }
 }

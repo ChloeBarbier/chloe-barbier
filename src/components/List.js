@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
 import { projects }  from "../data/projects";
 import { TfiWorld } from 'react-icons/tfi';
-import { BsYoutube } from 'react-icons/bs';
-import { MdOutlineCorporateFare } from 'react-icons/md';
+import { BsYoutube, BsGithub } from 'react-icons/bs';
+import { MdOutlineCorporateFare, MdEmojiPeople } from 'react-icons/md';
+import { getNewSearchParams } from '../tools';
 
+const List = ({seletedProjectId, onClickAccordion}) => {
+  const { t } = useTranslation();
 
-const Experience = () => {
-
-  const onClickAccordion = (key) => {
+  const openAccordion = (key) => {
     var button = document.getElementById(`button-${key}`);
     var panel = document.getElementById(`panel-${key}`);
     var sign = document.getElementById(`sign-${key}`);
@@ -21,50 +24,69 @@ const Experience = () => {
       panel.style.display = "unset";
       sign.textContent = "-";
     }
+
   }
-  const onClickExperience = (id) => {
-    window.location.href = `/experience?experienceId=${id}`;
-}
+  const onClick = (key) => {
+    openAccordion(key);
+    onClickAccordion();
+  }
+
+  useEffect(() => {
+    if (seletedProjectId) {
+      var element = document.getElementById(`button-${seletedProjectId}`);
+      if (element) {
+        openAccordion(seletedProjectId);
+        element.scrollIntoView();
+      }
+    }
+  }, [seletedProjectId]);
 
   return (
     <div className="projects-list grid-x">
       {projects.map((item, key) => {
         return (
-          <React.Fragment id={item.id} key={item.id} >
-            <button className="accordion" id={`button-${key}`} onClick={() => onClickAccordion(key)}>
+          <React.Fragment key={key} >
+            <button className="accordion" id={`button-${item.id}`} onClick={() => onClick(item.id)}>
               <div className="grid-x align-middle">
                 <div className='title small-8'>
-                  <span className='job-position'>{item.name}</span>
-                  <span style={{marginTop: '1rem'}} className='company'> @{item.related}</span>
+                  <span className='name'>{item.name}</span>
+                  <span className='company'> @{t(item.related)}</span>
                 </div>
                 <div className='date small-4'>
                   {item.date}
-                  <span className='sign' id={`sign-${key}`}>+</span>
+                  <span className='sign' id={`sign-${item.id}`}>+</span>
                 </div>
               </div>
             </button>
 
-            <div className="panel" id={`panel-${key}`}>
+            <div className="panel" id={`panel-${item.id}`}>
 
               <div className='grid-x grid-margin-x description'>
 
                 <div className='cell small-12 details grid-x'>
 
-                  {item.relatedId && <div className='cell shrink grid-x related align-middle' onClick={() => onClickExperience(item.relatedId)}>
+                  {item.relatedId && 
+                  <Link className='cell shrink grid-x related align-middle' to={`/experience${getNewSearchParams({'experienceId': item.relatedId})}`}>
                     <MdOutlineCorporateFare className="cell shrink svg-company icon"/>
                     <div className="cell shrink">{item.related}</div>
-                  </div>}
+                  </Link>
+                  }
 
                   <a className="cell shrink grid-x website align-middle" href={item.to} target="_blank" rel="noreferrer">
                     <TfiWorld className="cell shrink svg-website icon" />
                     <div className="cell shrink">{item.website}</div>
                   </a>
 
-                  {item?.videos && item.videos.length && item.videos.map((video, key) => 
+                  {item.videos && item.videos.length && item.videos.map((video, key) => 
                   <a className="cell shrink grid-x video align-middle" key={key} href={video.link} target="_blank" rel="noreferrer">
                     <BsYoutube className="cell shrink svg-video icon" />
-                    <div className="cell shrink">{video.title}</div>
+                    <div className="cell shrink">{t(video.title)}</div>
                   </a>)}
+
+                  {item.repo && <a className="cell shrink grid-x repository align-middle" href={item.repo} target="_blank" rel="noreferrer">
+                      <BsGithub className="cell shrink svg-github icon" />
+                      <span>{t("projects.repository")}</span>
+                  </a>}
 
                 </div>
 
@@ -76,21 +98,23 @@ const Experience = () => {
 
                   <div className="cell text">
                     {/* {item.description} */}
-                    {item.description.split("\n").map(text => (<div className='sub-text'>{text}</div>))}
+                    {t(item.description, {returnObjects: true})?.map((text, key) => (<div key={key} className='sub-text'>{text}</div>))}
                   </div>
 
                   <div className="cell text">
-                    {item.role.split("\n")?.map((text, key) =>
-                    <div key={key}>
-                        {key===0 && <img className="img-website icon" src="/assets/img/projects/icon_people.png" alt="icon" />}
+                    {t(item.role, {returnObjects: true})?.map((text, key) =>
+                    <div className="" key={key}>
+                        {/* {key===0 && <img className="img-website icon" src="/assets/img/projects/icon_people.png" alt="icon" />} */}
+                        {key===0 && <MdEmojiPeople className="svg-role icon" />}
+                        {/* {key===0 && <GiStairsGoal className="svg-role icon" />} */}
                         {text}
                     </div>
                     )}
                   </div>
 
-                  {item.subprojects?.length && <div className='cell'>
+                  {item?.subprojects && <div className='cell'>
                       <div className="cell cell-1 subprojects">
-                          {item.subprojects.split("\n")?.map((text, key) => {
+                          {t(item.subprojects, {returnObjects: true})?.map((text, key) => {
                               return <div key={key}>{text}</div>
                           })}
                       </div>
@@ -100,8 +124,9 @@ const Experience = () => {
                 
                 <div className='cell small-12 tags tools'>
                   {item.tools?.map((tool, i) => {
+                    if (!tool.label) console.log(item.tools)
                     return (
-                      <span key={`${key}-tool-${i}`} className='tag tool col1'>{tool.label}</span>
+                      <span key={`${key}-tool-${i}`} className='tag tool col1'>{t(tool.label)}</span>
                     );
                   })}
                 </div>
@@ -115,4 +140,4 @@ const Experience = () => {
   );
 }
 
-export default Experience;
+export default List;

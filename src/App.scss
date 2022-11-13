@@ -35,7 +35,7 @@ $lightfluopurple-t-plus: rgba(142,69,246,0.3);
 
 .App {
   background-image: url("../public/assets/img/fond.jpg");
-  background-size: 100%;
+  background-size: 100%; //pas bon. voir grand écran
   text-align: center;
   // min-height: 100%;
   position: relative;
@@ -95,9 +95,10 @@ $lightfluopurple-t-plus: rgba(142,69,246,0.3);
     .menu-item {
       margin-left: 1.5rem;
       margin-right: 0;
-      // color: unset;
       color: white;
-      // text-transform: uppercase;
+      a {
+        color: white;
+      }
       text-decoration: none;
       font-family: 'Roboto Mono';
 
@@ -213,7 +214,10 @@ $lightfluopurple-t-plus: rgba(142,69,246,0.3);
         filter: brightness(0) invert(1);
         -webkit-filter: brightness(0) invert(1);
         margin-right: 0.5rem;
-        width: 1.5rem;
+        width: 1.3rem;
+      }
+      svg.icon {
+        height: 1.3rem;
       }
     }
     a {
@@ -375,7 +379,7 @@ $lightfluopurple-t-plus: rgba(142,69,246,0.3);
         }
       }
     }
-    .website, .video, .related {
+    .website, .video, .related, .repository {
       &:hover {
         cursor: pointer;
         text-shadow:
@@ -403,24 +407,9 @@ $lightfluopurple-t-plus: rgba(142,69,246,0.3);
       width: 1.7rem;
       height: 1.7rem;
     }
-    .svg-website {
-      width: 1.3rem;
-      height: 1.3rem;
-    }
-    .img-prize {
-      width: 1.7rem;
-    }
-    .svg-video {
-      width: 1.3rem;
-      height: 1.3rem;
-    }
-    .svg-company {
-      width: 1.3rem;
-      height: 1.3rem;
-    }
-    .svg-prize {
-      width: 1.3rem;
-      height: 1.3rem;
+    svg.icon.svg-role {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
   .projects {
