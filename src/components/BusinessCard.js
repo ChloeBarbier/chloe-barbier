@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useTranslation } from "react-i18next";
 import { FaLinkedin } from 'react-icons/fa';
 import { BsTelephoneFill, BsGithub } from 'react-icons/bs';
@@ -64,7 +65,7 @@ const BusinessCard = ({setisMouseHover, isMouseHover}) => {
             </div>
 
             <div className="location">
-                <img className="img-location icon" src="/assets/img/experience/location.png" alt="icon" />
+                <img className="img-location icon" src="/assets/img/icon/location.png" alt="icon" />
                 France
             </div>
 
@@ -72,4 +73,15 @@ const BusinessCard = ({setisMouseHover, isMouseHover}) => {
         </div>
     )
 }
+
+BusinessCard.defaultProps = {
+    setisMouseHover: () => {},
+    isMouseHover: false
+}
+    
+BusinessCard.propTypes = {
+    setisMouseHover: PropTypes.func.isRequired,
+    isMouseHover: PropTypes.bool.isRequired
+}
+
 export default BusinessCard;

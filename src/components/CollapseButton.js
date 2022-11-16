@@ -20,6 +20,7 @@ const CollapseButton = ({onClickCollapse}) => {
         </button>
     )
 }
+
 CollapseButton.defaultProps = {
     onClickCollapse: () => {}
 }
@@ -27,4 +28,5 @@ CollapseButton.defaultProps = {
 CollapseButton.propTypes = {
     onClickCollapse: PropTypes.func
 }
+
 export default CollapseButton;

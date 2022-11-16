@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import { projects }  from "../data/projects";
@@ -45,7 +46,7 @@ const List = ({seletedProjectId, onClickAccordion}) => {
     <div className="projects-list grid-x">
       {projects.map((item, key) => {
         return (
-          <React.Fragment key={key} >
+          <React.Fragment key={key}>
             <button className="accordion" id={`button-${item.id}`} onClick={() => onClick(item.id)}>
               <div className="grid-x align-middle">
                 <div className='title small-8'>
@@ -84,47 +85,43 @@ const List = ({seletedProjectId, onClickAccordion}) => {
                   </a>)}
 
                   {item.repo && <a className="cell shrink grid-x repository align-middle" href={item.repo} target="_blank" rel="noreferrer">
-                      <BsGithub className="cell shrink svg-github icon" />
-                      <span>{t("projects.repository")}</span>
+                    <BsGithub className="cell shrink svg-github icon" />
+                    <span>{t("projects.repository")}</span>
                   </a>}
 
                 </div>
 
                 <div className="cell small-5 photo">
-                  <img className="img-project" src={`./assets/img/photo/` + item.photo} alt={item.photo} />
+                  <img className="img-project" src={`./assets/img/projects/photo/` + item.photo} alt={item.photo} />
                 </div>
 
                 <div className="cell small-7 grid-y align-center description">
 
                   <div className="cell text">
-                    {/* {item.description} */}
                     {t(item.description, {returnObjects: true})?.map((text, key) => (<div key={key} className='sub-text'>{text}</div>))}
                   </div>
 
                   <div className="cell text">
                     {t(item.role, {returnObjects: true})?.map((text, key) =>
                     <div className="" key={key}>
-                        {/* {key===0 && <img className="img-website icon" src="/assets/img/projects/icon_people.png" alt="icon" />} */}
-                        {key===0 && <MdEmojiPeople className="svg-role icon" />}
-                        {/* {key===0 && <GiStairsGoal className="svg-role icon" />} */}
-                        {text}
+                      {key===0 && <MdEmojiPeople className="svg-role icon" />}
+                      {text}
                     </div>
                     )}
                   </div>
 
                   {item?.subprojects && <div className='cell'>
-                      <div className="cell cell-1 subprojects">
-                          {t(item.subprojects, {returnObjects: true})?.map((text, key) => {
-                              return <div key={key}>{text}</div>
-                          })}
-                      </div>
+                    <div className="cell cell-1 subprojects">
+                      {t(item.subprojects, {returnObjects: true})?.map((text, key) => {
+                        return <div key={key}>{text}</div>
+                      })}
+                    </div>
                   </div>}
 
                 </div>
                 
                 <div className='cell small-12 tags tools'>
                   {item.tools?.map((tool, i) => {
-                    if (!tool.label) console.log(item.tools)
                     return (
                       <span key={`${key}-tool-${i}`} className='tag tool col1'>{t(tool.label)}</span>
                     );
@@ -138,6 +135,16 @@ const List = ({seletedProjectId, onClickAccordion}) => {
       })}
     </div>
   );
+}
+
+List.defaultProps = {
+  seletedProjectId: '',
+  onClickAccordion: ()=>{}
+}
+  
+List.propTypes = {
+  seletedProjectId: PropTypes.string,
+  onClickAccordion: PropTypes.func
 }
 
 export default List;

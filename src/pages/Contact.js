@@ -15,7 +15,7 @@ const Contact = () => {
         <div className='grid-x grid-margin-x'>
           <BusinessCard setisMouseHover={setisMouseHover} isMouseHover={isMouseHover}/>
           <div className={isMouseHover ? 'photo fakeOnHover' : 'photo'}>
-            <img src="../assets/img/portrait_debout_cadre.png" alt="portrait" />
+            <img src="../assets/img/portrait.png" alt="portrait" />
           </div>
           <About setisMouseHover={setisMouseHover} />
         </div>

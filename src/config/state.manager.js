@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const initialState = {
     homeIsActive: false,
-    // projectId: null,
 };
 
 const Context = React.createContext(initialState);
@@ -22,12 +21,6 @@ const reducer = (state, action) => {
         homeIsActive: action.homeIsActive === true
       };
     }
-    // case 'setProjectId': {
-    //   return {
-    //     ...state,
-    //     projectId: action.projectId || state.projectId
-    //   }
-    // }
     default:
       return state;
   }

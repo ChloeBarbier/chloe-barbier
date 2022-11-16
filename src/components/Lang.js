@@ -5,9 +5,9 @@ import { useSearchParams } from "react-router-dom";
  
 const Lang = ({lang}) => {
     let [searchParams, setSearchParams] = useSearchParams({});
-    const newLang = lang === Language.EN ? Language.FR : Language.EN;
     
     const onClick = () => {
+        const newLang = lang === Language.EN ? Language.FR : Language.EN;
         searchParams.set('lang', newLang);
         setSearchParams(searchParams);
     }
@@ -26,4 +26,5 @@ Lang.defaultProps = {
 Lang.propTypes = {
     lang: PropTypes.string
 }
+
 export default Lang;

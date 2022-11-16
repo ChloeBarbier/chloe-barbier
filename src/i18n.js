@@ -7,7 +7,6 @@ import translationFR from './i18n/fr.json';
 
 let defaultLanguage = Language.FR;
  
-// the translations
 const resources = {
   en: {
     translation: translationEN
@@ -19,7 +18,7 @@ const resources = {
  
 i18n
   .use(LanguageDetector)
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next)
   .init({
     resources,
     lng: defaultLanguage,

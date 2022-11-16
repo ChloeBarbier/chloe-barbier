@@ -1,15 +1,10 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-
 import { TfiWorld } from 'react-icons/tfi';
 import { MdLocationOn } from 'react-icons/md';
-import { GiLaurels } from 'react-icons/gi';
-import { RiMedal2Fill } from 'react-icons/ri';
-
 import CollapseButton from '../components/CollapseButton';
 import ExpandButton from '../components/ExpandButton';
 import { education }  from "../data/education";
-
 import Title from '../components/Title';
 
 const Experience = () => {
@@ -64,7 +59,6 @@ const Experience = () => {
                 <div className='grid-x'>
                   <div className="cell small-9 grid-y description">
                     {/* <div className="cell shrink duration">{item.duration}</div> */}
-                    
                     <div className='cell details grid-x'>
                       <div className="cell shrink grid-x location align-middle">
                         <MdLocationOn className="cell shrink svg-location icon" />
@@ -78,11 +72,13 @@ const Experience = () => {
                       </div>
                      {item.prize &&
                      <div className="cell shrink grid-x prize align-middle">
-                        <img className="cell shrink img-prize icon" src="/assets/img/experience/prize.png" alt="icon" />
+                        <img className="cell shrink img-prize icon" src="/assets/img/icon/prize.png" alt="icon" />
                         <div className="cell shrink">{t(item.prize)}</div>
                       </div>}
                     </div>
-                    <div className="cell text">{t(item.text)}</div>
+                    <div className="cell text">
+                      {t(item.text)}
+                    </div>
                     <div className='cell tags tools'>
                       {item.tools?.map((tool, i) => {
                         return (
@@ -91,11 +87,9 @@ const Experience = () => {
                       })}
                     </div>
                   </div>
-
                   <div className="cell small-3 photo">
                     <img className="img-school" src={`./assets/img/education/` + item.photo} alt={item.photo} />
                   </div>
-
                 </div>
               </div>
             </React.Fragment>

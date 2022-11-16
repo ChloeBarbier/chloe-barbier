@@ -30,7 +30,7 @@ const Experience = () => {
   }
 
   useEffect(() => {
-    // if experienceId open section and scroll to it
+    // if experienceId exists then open section and scroll to it
     const experienceId = searchParams.get('experienceId');
     if (experienceId) {
       var element = document.getElementById(`button-${experienceId}`);
@@ -77,7 +77,6 @@ const Experience = () => {
                 <div className='grid-x'>
                   <div className="cell small-9 grid-y description">
                     {/* <div className="cell shrink duration">{item.duration}</div> */}
-                    
                     <div className='cell details grid-x'>
                       <div className="cell shrink grid-x location align-middle">
                         <MdLocationOn className="cell shrink svg-location icon" />
@@ -90,9 +89,9 @@ const Experience = () => {
                         </div>
                       </div>
                     </div>
-
-                    <div className="cell text">{t(item.text)}</div>
-
+                    <div className="cell text">
+                      {t(item.text)}
+                    </div>
                     <div className='cell tags tools'>
                       {item.tools.map((tool, i) => {
                         return (
@@ -100,7 +99,6 @@ const Experience = () => {
                         );
                       })}
                     </div>
-
                     <div className='cell tags projects'>
                       {item.projects.map((project, i) => {
                         return (
@@ -118,11 +116,9 @@ const Experience = () => {
                       })}
                     </div>
                   </div>
-
                   <div className="cell small-3 photo">
                     <img src={`./assets/img/experience/` + item.photo} alt={item.photo} />
                   </div>
-
                 </div>
               </div>
             </React.Fragment>
