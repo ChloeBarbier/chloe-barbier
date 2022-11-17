@@ -98,11 +98,11 @@ const List = ({seletedProjectId, onClickAccordion}) => {
                 <div className="cell small-7 grid-y align-center description">
 
                   <div className="cell text">
-                    {t(item.description, {returnObjects: true})?.map((text, key) => (<div key={key} className='sub-text'>{text}</div>))}
+                    {t(item.description, {returnObjects: true}).map((text, key) => (<div key={key} className='sub-text'>{text}</div>))}
                   </div>
 
                   <div className="cell text">
-                    {t(item.role, {returnObjects: true})?.map((text, key) =>
+                    {t(item.role, {returnObjects: true}).map((text, key) =>
                     <div className="" key={key}>
                       {key===0 && <MdEmojiPeople className="svg-role icon" />}
                       {text}
@@ -113,7 +113,7 @@ const List = ({seletedProjectId, onClickAccordion}) => {
                 </div>
                 
                 <div className='cell small-12 tags tools'>
-                  {item.tools?.map((tool, i) => {
+                  {item.tools.map((tool, i) => {
                     return (
                       <span key={`${key}-tool-${i}`} className='tag tool col1'>{t(tool.label)}</span>
                     );
