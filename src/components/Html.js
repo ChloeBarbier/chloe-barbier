@@ -14,7 +14,7 @@ const DivStart = ({tab, text}) => (
     <span className='grey'>{'<'}</span>
     <span className='blue'>div </span>
     <span className='lightblue'>class=</span>
-    <span className='orange'>"{text}"</span>
+    <span className='orange'>&quot;{text}&quot;</span>
     <span className='grey'>{'>'}</span>
   </div>
 )

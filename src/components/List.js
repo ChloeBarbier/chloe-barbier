@@ -110,14 +110,6 @@ const List = ({seletedProjectId, onClickAccordion}) => {
                     )}
                   </div>
 
-                  {item?.subprojects && <div className='cell'>
-                    <div className="cell cell-1 subprojects">
-                      {t(item.subprojects, {returnObjects: true})?.map((text, key) => {
-                        return <div key={key}>{text}</div>
-                      })}
-                    </div>
-                  </div>}
-
                 </div>
                 
                 <div className='cell small-12 tags tools'>

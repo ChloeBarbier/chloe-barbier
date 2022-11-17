@@ -1,12 +1,13 @@
 {
   "name": "chloe-barbier",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
     "caniuse-lite": "^1.0.30001399",
+    "firebase": "7.24.0",
     "foundation-sites": "^6.7.4",
     "i18next": "^22.0.1",
     "i18next-browser-languagedetector": "^6.1.8",

@@ -100,7 +100,7 @@ const Experience = () => {
                       })}
                     </div>
                     <div className='cell tags projects'>
-                      {item.projects.map((project, i) => {
+                      {item.projects.map((project) => {
                         return (
                           <Link 
                             key={`${key}-project-${project.id}`} 

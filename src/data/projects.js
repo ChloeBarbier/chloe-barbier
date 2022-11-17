@@ -71,7 +71,6 @@ export const projects = [
       ],
       role: 'projects.role.widgets',
       description: 'projects.description.widgets',
-      subprojects: 'projects.subprojects.widgets' 
     },
     { 
       id: projectsIds.uikit, 
@@ -204,8 +203,8 @@ export const projects = [
       text: 'projects.text.portfolio',
       related: 'projects.personalProject',
       // relatedId: experienceIds.freelance22,
-      to: 'https://chloe.barbier.com',
-      website: 'chloe.barbier.com',
+      to: 'https://chloe-barbier.web.app/',
+      website: 'https://chloe-barbier.web.app',
       repo: "https://github.com/ChloeBarbier/chloe-barbier",
       tools: [
         tools.javascript,

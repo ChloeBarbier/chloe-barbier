@@ -45,7 +45,7 @@
         "firebase": "firebase",
         "cicd": "ci/cd",
         "htmlcss": "html/css",
-        "scss": "sass",
+        "scss": "scss",
         "angular": "angular.js",
         "github": "github",
         "gitlab": "gitlab",
@@ -143,10 +143,17 @@
         },
         "role": {
             "desking": [
-                "Développement de nouvelles fonctionnalités et maintien de l'application Desking360 en équipe Agile."
+                "En charge du développement de nouvelles fonctionnalités et du maintien de l'application Desking360, en équipe Agile."
             ],
             "widgets": [
-                "Conception, développement, implémentation et déploiement de 6 nouveaux modules indépendants."
+                "En charge de la conception, du développement, de l'implémentation et du déploiement de 6 nouveaux modules indépendants.",
+                "\u00A0",
+                "► Quotes widget: listing des soumissions, tri, filtres, recherche.",
+                "► Credit App. widget: formulaire d'application pour une demande de crédit banquaire.",
+                "► Deals widget: listing des ventes, tri, filtres, recherche.",
+                "► Offer Sheet widget: récapitulatif de l'offre, prêt à l'impression.",
+                "► Trade-in widget: intégration d'un véhicule d'échange avec une valeur de reprise déduite.",
+                "► Contact widget: listing de tous les contacts et fiche détaillée par contact."
             ],
             "uikit": [
                 "Développement et maintien de nouveaux composants UI. Développement de nouveaux designs et création de nouvelles maquettes en vue du développement des nouveaux widgets pour les applications Desking360 et CRM360."
@@ -158,7 +165,8 @@
                 "► Implémentation des nouvelles versions au sein des applications."
             ],
             "roofgraf":  [
-                "Intégration continue du module de dessin et de ses nouvelles fonctionnalités au sein de Roofgraf. Participation également au développement front-end de l'application Roofgraf"
+                "Intégration continue du module de dessin et de ses nouvelles fonctionnalités au sein de Roofgraf.",
+                "Participation également au développement front-end de l'application Roofgraf."
             ],
             "solargraf": [
                 "Intégration continue du module de dessin et de ses nouvelles fonctionnalités au sein de Solargraf."
@@ -176,52 +184,58 @@
         "description": {
             "desking": [
                 "Desking360 est un gestionnaire de soumissions innovant d'achat de véhicules en ligne, du choix de la marque et du modèle, jusqu'à la livraison à domicile.",
-                "Cette application est utilisée par les concessionnaires automobiles sur le marché nord-américain.",
-                "Les clients peuvent accéder aux véhicules enregistrés dans leur 'garage virtuel', et valider la transaction en ligne.",
-                "L'application React est faite avec Next.js, elle est embarquée dans le CRM (application web CRM360 en Angular.js)"
+                "\u00A0",
+                "Cette application est utilisée par les concessionnaires automobiles sur le marché nord-américain. Leurs clients peuvent accéder aux véhicules enregistrés dans leur garage virtuel et valider la transaction en ligne.",
+                "\u00A0",
+                "L'application React est utilise Next.js et est embarquée dans le CRM (app web CRM360 en Angular.js)"
             ],
             "widgets": [
-                "Les applications on été développés en React.js à partir de templates, et sont embarquées dans Desking360 et CRM360.",
-                "L'architecture de ces widgets a été développée à partir du boilerplate Razzle (application SSR)."
+                "Les widgets on été développés en React.js et sont embarqués dans Desking360 et CRM360.",
+                "L'architecture de ces applications a été développée à partir du boilerplate Razzle (application SSR)."
             ],
             "uikit": [
-                "Le ui-kit est une librairie front-end suivant les principes du Atomic Design. Il a été développé pour un usage interne afin de standardiser les composants et le design au sein des applications et widgets de Solutions Médias 360. Il permet de créer une identité graphique cohérente, évolutive et maintenable."
+                "Le ui-kit est une librairie front-end suivant les principes du Atomic Design.",
+                "\u00A0",
+                "Il a été développé pour un usage interne afin de standardiser les composants et le design au sein des applications et widgets de Solutions Médias 360. Il permet de créer une identité graphique cohérente, évolutive et maintenable."
             ],
             "drawing": [
-                "Le Drawing est le module de dessin intelligent des applications web de Sofdesk.",
-                "Son algorithme est utile au cœur de l'estimation des mesures de toit et de l'installation virtuelle de panneaux solaires.",
+                "Le Drawing est le module de dessin intelligent des applications web de Sofdesk. L'algorithme est au cœur de l'estimation des mesures de toit et de l'installation virtuelle de panneaux solaires.",
+                "\u00A0",
                 "Il a été développé avec Paper.js qui est le couteau suisse du graphisme vectoriel."
             ],
             "roofgraf": [
                 "Roofgraf est une application web qui permet aux entreprises de couvreurs de toits d'obtenir des mesures aériennes 3D précises et de créer des devis en quelques secondes.",
-                "Le module de dessin (cf. 'drawing') est un outil front-end intégré à l'application qui permet d'obtenir des mesures précises des toitures, et de créer, construire et définir son projet."
+                "\u00A0",
+                "Le module de dessin (cf. 'drawing') est un outil front-end intégré à l'application qui permet d'obtenir des mesures précises des toitures, et de créer, construire et définir des projets."
             ],
             "solargraf": [
                 "Solargraf est une application web accélératrice de ventes SaaS pour les installateurs de panneaux solaires aux États-Unis et au Canada.",
+                "\u00A0",
                 "Les utilisateurs gèrent leurs projets, créent et envoient des devis, développent leur clientèle et leurs ventes.",
-                "Le module de dessin (cf. 'drawing') est un outil front-end intégré à l'application qui permet d'installer virtuellement des pannaux solaires, afin d'analyser, calculer et ainsi créer et définir son projet."
+                "\u00A0",
+                "Le module de dessin (cf. 'drawing') est un outil front-end intégré à l'application qui permet d'installer virtuellement des pannaux solaires, afin d'analyser, calculer et ainsi définir des projets."
             ],
             "labam": [
                 "Le concept original de la boîte à mots est de choisir un dictionnaire (càd. une liste de mots) et des paramètres pour obtenir des mots nouveaux.",
-                "Actuellement l'application web invente des prénoms, elle intègre donc pour le moment un seul dictionnaire. Elle est faite en React.js, et la connexion et la sauvegarde des mots sur un compte utilisateur ont été développées avec Firebase.",
-                "Les prochains objectifs sont l'amélioration de l'algorithme de génération (notamment pour l'intégration de paramètres comme l'originalité, la sonorité), les aspects base de données avec Firebase, et enfin les aspects UI/UX."
+                "\u00A0",
+                "Actuellement l'application web invente des prénoms, elle intègre donc pour le moment un seul dictionnaire. Elle est faite en React.js, et la connexion/déconnexion et la sauvegarde des mots sur un compte utilisateur ont été développées avec Firebase.",
+                "\u00A0",
+                "Les prochaines améliorations visent l'algorithme de génération (notamment pour l'intégration de paramètres comme l'originalité, la sonorité), certains aspects base de données, ainsi que UI/UX."
             ],
             "portfolio": [
-                "Application web en React.js, construite à partir du boilerplate create-react-app.",
+                "Ce portfolio est une application web en React.js, construite à partir du boilerplate create-react-app. Les frameworks intéressants utilisés dans ce projet sont :",
+                "\u00A0",
+                "► firebase pour le déploiement",
+                "► foundation pour créer une app responsive",
+                "► i18next pour les traductions fr/en",
+                "► react-icons pour l'affichage d'icônes",
+                "► react-router-dom pour la navigation",
+                "► React 17.0 pour l'usage des hooks",
+                "\u00A0",
                 "Le code est accessible sur Github."
             ],
             "mangal": [
-                "Hôtel Mangal situé à Dibulla sur la côte colombienne des Caraïbes, son site web a subi un important rafraichissement."
-            ]
-        },
-        "subprojects": {
-            "widgets": [
-                "► Quotes widget: listing des soumissions, tri, filtres, recherche.",
-                "► Credit App. widget: formulaire d'application pour une demande de crédit banquaire.",
-                "► Deals widget: listing des ventes, tri, filtres, recherche.",
-                "► Offer Sheet widget: récapitulatif de l'offre, prêt à l'impression.",
-                "► Trade-in widget: intégration d'un véhicule d'échange avec valeur de reprise déduite.",
-                "► Contact widget: listing de tous les contacts et fiche détaillée par contact."
+                "Hôtel Mangal situé à Dibulla sur la côte colombienne des Caraïbes. Rafraichissement du site web."
             ]
         }
     },

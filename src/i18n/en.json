@@ -45,7 +45,7 @@
         "firebase": "firebase",
         "cicd": "ci/cd",
         "htmlcss": "html/css",
-        "scss": "sass",
+        "scss": "scss",
         "angular": "angular",
         "github": "github",
         "gitlab": "gitlab",
@@ -146,16 +146,23 @@
                 "Development of new features and maintenance of the Desking360 application in an Agile team."
             ],
             "widgets": [
-                "Design, development, implementation and deployment from scratch of six independent modules."
+                "In charge of the design, the development, the implementation and the deployment of those six independent modules :",
+                "\u00A0",
+                "► Quotes widget: submissions listing, sorting, filters, search.",
+                "► Credit App. widget: application form for a bank loan application.",
+                "► Deals widget: sales listing, sorting, filters, search.",
+                "► Offer Sheet widget: summary of the offer, ready for printing and signing",
+                "► Trade-in widget: integration of an exchange vehicle with trade-in value deducted.",
+                "► Contact widget: contacts listing and detailed page by contact."
             ],
             "uikit": [
-                "Development of new UI atoms (basic components) and new features, maintenance. New designs development and new templates creation for the new widgets of Desking360 and CRM360 applications."
+                "Development of new UI atoms (atomic role components) and new features. Maintenance. New designs development and new templates creation for the new widgets of Desking360 and CRM360 applications."
             ],
             "drawing": [
                 "In charge of the development and maintenance of this module:",
                 "► Mathematics, solid geometry, algorithms.",
                 "► Research and features development, bug fixes.",
-                "► Implementation of new versions within React applications."
+                "► Implementation of new versions within React apps."
             ],
             "roofgraf":  [
                 "Continuous integration of the drawing module and its new functionalities within Roofgraf. Also participated in the front-end development of the Roofgraf application."
@@ -176,52 +183,61 @@
         "description": {
             "desking": [
                 "Desking360 is an innovative quote manager for online vehicle purchases, from the choice of make and model, to home delivery.",
-                "This application is used by car dealerships in the North American market.",
-                "Customers can access registered vehicles in their 'virtual garage', and validate the transaction online.",
+                "\u00A0",
+                "This application is used by car dealerships in the North American market. The customers can access registered vehicles in their 'virtual garage', and validate the transaction online.",
+                "\u00A0",
                 "The React application is made with Next.js and it is embedded in the CRM (CRM360 is an Angular.js web application)"
             ],
             "widgets": [
-                "The applications have been developed in React.js from templates, and are embedded in Desking360 and CRM360.",
-                "The architecture of these widgets was developed from the boilerplate Razzle (SSR application)."
+                "Those widgets have been developed in React.js from scratch, and have been embedded in Desking360 and CRM360. The architecture of each application was developed from the boilerplate Razzle (SSR application)."
             ],
             "uikit": [
-                "The ui-kit is a front-end library following the principles of the Atomic Design. It was developed for internal use in order to standardize the components and the design within the Solutions Médias 360 applications and widgets. It makes it possible to create a coherent, scalable and maintainable graphic identity."
+                "The ui-kit is a front-end library following the principles of the Atomic Design.",
+                "\u00A0",
+                "It was developed for internal use in order to standardize the components and the design within the Solutions Médias 360 applications and widgets.",
+                "\u00A0",
+                "It makes it possible to create a coherent, scalable and maintainable graphic identity."
             ],
             "drawing": [
                 "The Drawing module is the smart algorithm of Sofdesk web applications.",
+                "\u00A0",
                 "This module is useful at the heart of estimating roof measurements and virtual installation of solar panels.",
+                "\u00A0",
                 "It was developed with Paper.js which is the Swiss army knife of vector graphics."
             ],
             "roofgraf": [
                 "Roofgraf is a web-based application that allows roofing companies to get accurate 3D aerial measurements and create quotes in seconds.",
+                "\u00A0",
                 "The drawing module (see 'drawing' project) is a front-end tool integrated into the application which allows you to obtain precise measurements of roofs, and to create, build and define your project."
             ],
             "solargraf": [
                 "Solargraf is a SaaS sales accelerator web application for solar panel installers in the United States and Canada.",
+                "\u00A0",
                 "Users manage their projects, create and send quotes, grow their customer base and sales.",
+                "\u00A0",
                 "The drawing module (see 'drawing' project) is a front-end tool integrated into the application which allows to virtually install solar panels, in order to analyze, estimates and finally build your project with solar permits."
             ],
             "labam": [
-                "Basically, the original concept of la Bam (the word box) is to choose a dictionary (typically a list of words) and parameters to get new words.",
+                "Basically, the original concept of la Bam (word box) is to choose a dictionary (typically a list of words) and parameters to get new words.",
+                "\u00A0",
                 "Currently the web application invents first names, so for the moment it includes only one dictionary. It is made with React.js, and the backend side (the login and saving of words to a user account) was developed with Firebase.",
-                "The App is in continuous improvement, the next features are going to be on the generation algorithm (eg. integration of parameters such as originality, sound), then the database aspects with Firebase, and finally some UI/UX aspects."
+                "\u00A0",
+                "The App is in continuous improvement. The next features are going to be related to the generation algorithm (eg. integration of parameters such as originality, sound), then related to database and UI/UX aspects."
             ],
             "portfolio": [
-                "React web application built from the create-react-app boilerplate.",
+                "This portfolio is a React web application built from the create-react-app boilerplate. The interesting frameworks used into this project are :",
+                "\u00A0",
+                "► firebase for the deployment",
+                "► foundation for a responsive app",
+                "► i18next for the fr/en translations",
+                "► react-icons for the icons",
+                "► react-router-dom for the navigation",
+                "► React 17.0 for the hooks usage",
+                "\u00A0",
                 "The code is available on Github."
             ],
             "mangal": [
                 "Mangal Hostel located in Dibulla on the Colombian Caribbean coast, its website has undergone a major refresh."
-            ]
-        },
-        "subprojects": {
-            "widgets": [
-                "► Quotes widget: submissions listing, sorting, filters, search.",
-                "► Credit App. widget: application form for a bank loan application.",
-                "► Deals widget: sales listing, sorting, filters, search.",
-                "► Offer Sheet widget: summary of the offer, ready for printing and signing",
-                "► Trade-in widget: integration of an exchange vehicle with trade-in value deducted.",
-                "► Contact widget: contacts listing and detailed page by contact."
             ]
         }
     },
