@@ -80,7 +80,7 @@ const Experience = () => {
                       {t(item.text)}
                     </div>
                     <div className='cell tags tools'>
-                      {item.tools?.map((tool, i) => {
+                      {item.tools.map((tool, i) => {
                         return (
                           <span key={`${key}-tool-${i}`} className='tag tool col1'>{t(tool.label)}</span>
                         );

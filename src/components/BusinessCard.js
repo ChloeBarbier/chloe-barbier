@@ -17,58 +17,62 @@ const BusinessCard = ({setisMouseHover, isMouseHover}) => {
       }
 
     return (
-        <div className="cell grid-y align-center align-self-stretch description">
-            <div className='cell text'><span>{t('contact.businessCard.needInfo')}</span></div>
-            <div className='cell text'><span>{t('contact.businessCard.shareProject')}</span></div>
-            <div className='cell text'><span>{t('contact.businessCard.contactMe')}</span></div>
-            <div className='cell text'>
-            <div id="links" className="links">
+        <div className="cell grid-x align-center align-middle small-12 medium-12 large-6 description">
+            <div className='cell small-10 medium-10 grid-y align-middle'>
+                <div className='cell text'><span>{t('contact.businessCard.needInfo')}</span></div>
+                <div className='cell text'><span>{t('contact.businessCard.shareProject')}</span></div>
+                <div className='cell text'><span>{t('contact.businessCard.contactMe')}</span></div>
+                <div className='cell text'>
+                    <div id="links" className="links">
 
-                <div
-                onMouseLeave={() => {setisCopied(false); setisMouseHover(false);}}
-                onMouseOver={() => setisMouseHover(true)}
-                onClick={() => copytoClipboard(myContact)} 
-                data-descr={isCopied ? t('contact.businessCard.copied') : t('contact.businessCard.copy')} 
-                className={(isCopied ? 'isCopied' : '') + ' business-card grid-x align-middle'}>
-                    <TiBusinessCard className="cell shrink social-media-icons"/>
-                    <span className="cell auto">{t('contact.businessCard.businessCard')}</span>
-                </div>
-                <br />
+                        <div
+                        onMouseLeave={() => {setisCopied(false); setisMouseHover(false);}}
+                        onMouseOver={() => setisMouseHover(true)}
+                        onClick={() => copytoClipboard(myContact)} 
+                        data-descr={isCopied ? t('contact.businessCard.copied') : t('contact.businessCard.copy')} 
+                        className={(isCopied ? 'isCopied' : '') + ' business-card grid-x align-middle'}>
+                            <TiBusinessCard className="cell shrink social-media-icons"/>
+                            <span className="cell auto">{t('contact.businessCard.businessCard')}</span>
+                        </div>
+                        <br />
 
-                <div className='tel'>
-                <a className={isMouseHover ? 'fakeOnHover' : ''} href="tel:+33650966461" target="_blank" rel="noreferrer">
-                    <BsTelephoneFill className="social-media-icons"/>
-                    <span> {myNumber}</span>
-                </a>
-                </div>
+                        <div className='tel'>
+                            <a className={isMouseHover ? 'fakeOnHover' : ''} href="tel:+33650966461" target="_blank" rel="noreferrer">
+                                <BsTelephoneFill className="social-media-icons"/>
+                                <span> {myNumber}</span>
+                            </a>
+                        </div>
 
-                <div className='mail'>
-                <a className={isMouseHover ? 'fakeOnHover' : ''} href={`mailto:${myEmail}`} target="_blank" rel="noreferrer">
-                    <GrMail className="social-media-icons"/>
-                    <span> {myEmail}</span>
-                </a>
-                </div>
+                        <div className='mail'>
+                            <a className={isMouseHover ? 'fakeOnHover' : ''} href={`mailto:${myEmail}`} target="_blank" rel="noreferrer">
+                                <GrMail className="social-media-icons"/>
+                                <span> {myEmail}</span>
+                            </a>
+                        </div>
 
-                <div className='linkedin'>
-                <a className={isMouseHover ? 'fakeOnHover' : ''} href={myLinkedin} target="_blank" rel="noreferrer">
-                    <FaLinkedin className="social-media-icons"/>
-                    <span> LinkedIn</span>
-                </a>
-                </div>
+                        <div className='linkedin'>
+                            <a className={isMouseHover ? 'fakeOnHover' : ''} href={myLinkedin} target="_blank" rel="noreferrer">
+                                <FaLinkedin className="social-media-icons"/>
+                                <span> LinkedIn</span>
+                            </a>
+                        </div>
 
-                <div className='github'>
-                <a className={isMouseHover ? 'fakeOnHover' : ''} href={myGithub} target="_blank" rel="noreferrer">
-                    <BsGithub className="social-media-icons"/>
-                    <span> GitHub</span>
-                </a>
+                        <div className='github'>
+                            <a className={isMouseHover ? 'fakeOnHover' : ''} href={myGithub} target="_blank" rel="noreferrer">
+                                <BsGithub className="social-media-icons"/>
+                                <span> GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="location">
+                        <img className="img-location icon" src="/assets/img/icon/location.png" alt="icon" />
+                        France
+                    </div>
                 </div>
             </div>
 
-            <div className="location">
-                <img className="img-location icon" src="/assets/img/icon/location.png" alt="icon" />
-                France
-            </div>
-
+            <div className={isMouseHover ? 'cell small-2 medium-2 photo fakeOnHover' : 'cell small-2 medium-2 photo'}>
+                <img src="../assets/img/portrait.png" alt="portrait" />
             </div>
         </div>
     )

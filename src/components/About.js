@@ -12,7 +12,7 @@ const About = ({setisMouseHover}) => {
         setisMouseHover(false);
     }
     return (
-      <div className="cell auto description about-description grid-y align-center align-self-stretch ">
+      <div className="cell small-12 medium-12 large-6 description about-description grid-y align-center">
         <div className='cell text'>
           <span>Bonjour, Hi !</span>
         </div>

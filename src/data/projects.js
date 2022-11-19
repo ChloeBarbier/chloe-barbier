@@ -186,6 +186,7 @@ export const projects = [
         tools.reactjs,
         tools.firebase,
         tools.hooks,
+        tools.algorithmic,
         tools.htmlcss,
         tools.scss,
         tools.git,

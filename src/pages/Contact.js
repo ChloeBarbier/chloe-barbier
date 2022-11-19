@@ -14,9 +14,6 @@ const Contact = () => {
         <Title text={t('nav.contact')} />
         <div className='grid-x grid-margin-x'>
           <BusinessCard setisMouseHover={setisMouseHover} isMouseHover={isMouseHover}/>
-          <div className={isMouseHover ? 'photo fakeOnHover' : 'photo'}>
-            <img src="../assets/img/portrait.png" alt="portrait" />
-          </div>
           <About setisMouseHover={setisMouseHover} />
         </div>
       </div>

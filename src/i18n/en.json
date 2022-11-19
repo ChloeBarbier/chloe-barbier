@@ -10,7 +10,7 @@
         "webdev": "Web developer",
         "frontend": "front-end",
         "engineer": "Engineer",
-        "physics": "physics"
+        "physics": "in physics"
     },
     "experience": {
         "freelance": "Freelance",
@@ -22,10 +22,10 @@
         },
         "now": "now",
         "text": {
-            "freelance22": "Web applications development. Consulting. Personal projects development.",
-            "sm360": "Web solutions development and maintenance. Code reviewing. Development of a ui library in kit. New reactjs modules integration. Management Agile Scrum.",
-            "freelance19": "New pages integration of a hostel website, support and maintenance of the existing, bug fixes. Personal projects development on the side.",
-            "sofdesk": "Research, development and maintenance of the webapp drawing module at Sofdesk (now 'Enphase Energy Canada Holdings'). Spatial geometry, peer code reviewing, management Agile Scrum.",
+            "freelance22": "Web application development. Consulting. Personal projects development.",
+            "sm360": "Web solution development and maintenance. Code reviewing. Development of a ui library in kit. New react.js modules integration. Agile/Scrum management.",
+            "freelance19": "Integration of new pages on a hostel website. Support, maintenance and bug fixes. Personal projects development on the side.",
+            "sofdesk": "Research, development and maintenance of the webapp's drawing module at Sofdesk (now 'Enphase Energy Canada Holdings'). Spatial geometry. Peer code reviewing. Agile/Scrum management.",
             "efficiencia": "Research and development for building energy efficiency. Algorithm development in C++ for thermical simulation of energy forcasting. In partnership with SCLE-SFE, EDF subsidiary.",
             "sogeti": "End-of-studies internship in physics engineering. Software development. Flight tests instrumentation in the aeronautical industry.",
             "intespace": "Software development internship in the aerospatial industry. Instrumentation on satellites."
@@ -120,10 +120,10 @@
             "insa": "English TOEIC 825"
         },
         "text": {
-            "udem": "Applied computer science, multimedia, web design and integration. Programming, Web development.",
+            "udem": "Applied computer science, multimedia, web design and web integration. Programming, web development.",
             "insa": "Basic and applied sciences. Engineering and physics sciences. Instrumentation. Computer sciences. Hardware and software development.",
-            "uni": "Exchange programme in physics.",
-            "bellevue": "CPGE in advanced mathematics. Mathematics, Physics and Engineering Sciences (MPSI)."
+            "uni": "Exchange program in physics.",
+            "bellevue": "CPGE in advanced mathematics. Mathematics, physics and engineering sciences (MPSI)."
         }
     },
     "projects": {
@@ -131,7 +131,7 @@
         "video": "Video",
         "repository": "Github repository",
         "text": {
-            "desking": "React Web Application creating and managing quotes for online vehicle purchases",
+            "desking": "React web application. Creating and managing quotes for online vehicle purchases",
             "widgets": "Six different React modules implemented in Solutions Medias 360 web applications",
             "uikit": "React module of front-end tools for the creation of a graphic identity",
             "drawing": "Smart javascript drawing module for Solargraf and Roofgraf web applications",
@@ -139,7 +139,7 @@
             "solargraf": "React web application for the installation of solar panels on roofs",
             "labam": "React web application that invents non-existent words ad infinitum",
             "portfolio": "React web application",
-            "mangal": "Wix website of the Mangal hostel located on the Colombian Caribbean coast"
+            "mangal": "Wix website of a hostel located on the Colombian Caribbean coast"
         },
         "role": {
             "desking": [
@@ -153,7 +153,7 @@
                 "► Deals widget: sales listing, sorting, filters, search.",
                 "► Offer Sheet widget: summary of the offer, ready for printing and signing",
                 "► Trade-in widget: integration of an exchange vehicle with trade-in value deducted.",
-                "► Contact widget: contacts listing and detailed page by contact."
+                "► Contact widget: contacts listing and detailed page of each contact."
             ],
             "uikit": [
                 "Development of new UI atoms (atomic role components) and new features. Maintenance. New designs development and new templates creation for the new widgets of Desking360 and CRM360 applications."
@@ -182,7 +182,7 @@
         },
         "description": {
             "desking": [
-                "Desking360 is an innovative quote manager for online vehicle purchases, from the choice of make and model, to home delivery.",
+                "Desking360 is an innovative quote manager for online vehicle purchases. From the choice of make and model, to home delivery.",
                 "\u00A0",
                 "This application is used by car dealerships in the North American market. The customers can access registered vehicles in their 'virtual garage', and validate the transaction online.",
                 "\u00A0",
@@ -208,21 +208,21 @@
             "roofgraf": [
                 "Roofgraf is a web-based application that allows roofing companies to get accurate 3D aerial measurements and create quotes in seconds.",
                 "\u00A0",
-                "The drawing module (see 'drawing' project) is a front-end tool integrated into the application which allows you to obtain precise measurements of roofs, and to create, build and define your project."
+                "The drawing module (see 'drawing' project) is a front-end tool integrated into the application which allows to obtain precise measurements of roofs, leading to create, build and define a project."
             ],
             "solargraf": [
                 "Solargraf is a SaaS sales accelerator web application for solar panel installers in the United States and Canada.",
                 "\u00A0",
-                "Users manage their projects, create and send quotes, grow their customer base and sales.",
+                "Users manage their projects, create and send quotes, growing their customer base and sales.",
                 "\u00A0",
-                "The drawing module (see 'drawing' project) is a front-end tool integrated into the application which allows to virtually install solar panels, in order to analyze, estimates and finally build your project with solar permits."
+                "The drawing module (see 'drawing' project) is a front-end tool integrated into the application which allows to virtually install solar panels in order to estimate and build a project with solar permits."
             ],
             "labam": [
-                "Basically, the original concept of la Bam (word box) is to choose a dictionary (typically a list of words) and parameters to get new words.",
+                "The original concept of 'La boîte à mots' is to create new words based on a dictionary (chosen lexicon) thanks to an algorithm.",
                 "\u00A0",
-                "Currently the web application invents first names, so for the moment it includes only one dictionary. It is made with React.js, and the backend side (the login and saving of words to a user account) was developed with Firebase.",
+                "Currently the web application invents new first names (chosen lexicon). It is made with React.js. The backend side (login/logout, liked words) was developed with Firebase.",
                 "\u00A0",
-                "The App is in continuous improvement. The next features are going to be related to the generation algorithm (eg. integration of parameters such as originality, sound), then related to database and UI/UX aspects."
+                "The app is in continuous improvement. The next features are going to be related to the algorithm, then related to the database and UI/UX aspects."
             ],
             "portfolio": [
                 "This portfolio is a React web application built from the create-react-app boilerplate. The interesting frameworks used into this project are :",
@@ -237,23 +237,23 @@
                 "The code is available on Github."
             ],
             "mangal": [
-                "Mangal Hostel located in Dibulla on the Colombian Caribbean coast, its website has undergone a major refresh."
+                "Mangal Hostel's website has undergone a major refresh."
             ]
         }
     },
     "contact": {
         "businessCard": {
-            "needInfo": "Need informations ?",
-            "shareProject": "Want to share a project?",
+            "needInfo": "Need information ?",
+            "shareProject": "Want to share a project ?",
             "contactMe": "Contact me.",
             "copy": "copy",
             "copied": "copied",
             "businessCard": "Business card"
         },
         "about": {
-            "introduction": "I am a web developer, and for several years now I have been working mainly on front-end technologies. I expand my activities with design and web integration.",
+            "introduction": "I am a web developer. For several years now I have mainly been working on front-end technologies. I expand my activities with design and web integration.",
             "engineer": "Engineer in physics, I also have expertise on projects that require a scientific, mathematical approach.",
-            "nowadays": "I am currently a freelancer based in France. I work remotely, alone or in a team, in English and French.",
+            "nowadays": "I am currently a freelancer based in France. I work remotely, alone or in team, in English and in French.",
             "contact": "Get in touch."
         }
     }
