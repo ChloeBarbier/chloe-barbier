@@ -143,7 +143,7 @@
         },
         "role": {
             "desking": [
-                "Development of new features and maintenance of the Desking360 application in an Agile team."
+                "Development of new features and maintenance of the Desking 360 application in an Agile team."
             ],
             "widgets": [
                 "In charge of the design, the development, the implementation and the deployment of those six independent modules :",
@@ -156,7 +156,7 @@
                 "► Contact widget: contacts listing and detailed page of each contact."
             ],
             "uikit": [
-                "Development of new UI atoms (atomic role components) and new features. Maintenance. New designs development and new templates creation for the new widgets of Desking360 and CRM360 applications."
+                "Development of new UI atoms (atomic role components) and new features. Maintenance. New designs development and new templates creation for the new widgets of Desking 360 and CRM 360 applications."
             ],
             "drawing": [
                 "In charge of the development and maintenance of this module:",
@@ -182,14 +182,14 @@
         },
         "description": {
             "desking": [
-                "Desking360 is an innovative quote manager for online vehicle purchases. From the choice of make and model, to home delivery.",
+                "Desking 360 is an innovative quote manager for online vehicle purchases. From the choice of make and model, to home delivery.",
                 "\u00A0",
                 "This application is used by car dealerships in the North American market. The customers can access registered vehicles in their 'virtual garage', and validate the transaction online.",
                 "\u00A0",
-                "The React application is made with Next.js and it is embedded in the CRM (CRM360 is an Angular.js web application)"
+                "The React application is made with Next.js and it is embedded in the CRM (CRM 360 is an Angular.js web application)"
             ],
             "widgets": [
-                "Those widgets have been developed in React.js from scratch, and have been embedded in Desking360 and CRM360. The architecture of each application was developed from the boilerplate Razzle (SSR application)."
+                "Those widgets have been developed in React.js from scratch, and have been embedded in Desking 360 and CRM 360. The architecture of each application was developed from the boilerplate Razzle (SSR application)."
             ],
             "uikit": [
                 "The ui-kit is a front-end library following the principles of the Atomic Design.",

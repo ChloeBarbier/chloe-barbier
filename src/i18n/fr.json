@@ -24,8 +24,8 @@
         "text": {
             "freelance22": "Développement d'applications web. Conseil. Développement de projets personnels.",
             "sm360": "Développement et maintien de solutions web. Revue de code. Développement d’une librairie UI en kit. Intégration de nouveaux modules en React. Management Agile Scrum.",
-            "freelance19": "Travail sur de l'intégration de nouvelles pages du site web d'un hotel, maintien de certaines fonctionnalités, correction de bugs. D'autre part, développement de projets personnels.",
-            "sofdesk": "Chez Sofdesk (depuis devenue 'Enphase Energy Canada Holdings'), recherche, développement et maintien du module de dessin des applications web. Géométrie dans l'espace, Revue de code, Management Agile Scrum.",
+            "freelance19": "Intégration de nouvelles pages du site web d'un hôtel, refonte graphique, maintien, correction de bugs. D'autre part, développement de projets personnels.",
+            "sofdesk": "Recherche, développement et maintien du module de dessin des applications web de Sofdesk (depuis devenu 'Enphase Energy Canada Holdings'). Géométrie dans l'espace. Revue de code. Management Agile Scrum.",
             "efficiencia": "Recherche et développement dans le domaine de l’efficacité énergétique des bâtiments. Développement en C++ d'un algorithme de simulation thermique pour la prévision énergétique. En partenariat avec la SCLE-SFE filiale d'EDF.",
             "sogeti": "Stage de fin d'études en génie physique. Développement informatique. Instrumentation des essais en vol dans le domaine de l'aéronautique.",
             "intespace": "Stage en développement informatique dans le domaine de l'aérospatial. Instrumentation sur des satellites."
@@ -121,9 +121,9 @@
         },
         "text": {
             "udem": "Informatique appliquée, multimédia, design et intégration web. Développement informatique, programmation de solutions web.",
-            "insa": "Sciences fondamentales et Appliquées. Sciences physiques. Instrumentation. Informatique. Développement hardware et software.",
+            "insa": "Sciences fondamentales et appliquées. Sciences physiques. Instrumentation. Informatique. Développement hardware et software.",
             "uni": "Échange universitaire. Sciences physiques.",
-            "bellevue": "CPGE en Mathématiques supérieures. MPSI: Mathématiques, Physique et Sciences de l'ingénieur."
+            "bellevue": "CPGE en Mathématiques supérieures. MPSI: Mathématiques, Physique et Sciences de l'Ingénieur."
         }
     },
     "projects": {
@@ -132,7 +132,7 @@
         "repository": "Dépôt github",
         "text": {
             "desking": "Application web en React qui est un gestionnaire de soumissions d'achat de véhicules en ligne",
-            "widgets": "Six différents modules en React implémentées dans les applications web de Solutions Medias 360",
+            "widgets": "Six différents modules en React implémentés dans les applications web de Solutions Medias 360",
             "uikit": "Module en React d'outils front-end pour la création d'une identité graphique",
             "drawing": "Module de dessin intelligent en javascript pour les applications web Solargraf et Roofgraf",
             "roofgraf": "Application web en React pour la mesure aérienne 3D précise de toitures",
@@ -143,20 +143,20 @@
         },
         "role": {
             "desking": [
-                "En charge du développement de nouvelles fonctionnalités et du maintien de l'application Desking360, en équipe Agile."
+                "En charge du développement de nouvelles fonctionnalités et du maintien de l'application Desking 360, en équipe Agile."
             ],
             "widgets": [
                 "En charge de la conception, du développement, de l'implémentation et du déploiement de 6 nouveaux modules indépendants.",
                 "\u00A0",
                 "► Quotes widget: listing des soumissions, tri, filtres, recherche.",
-                "► Credit App. widget: formulaire d'application pour une demande de crédit banquaire.",
+                "► Credit App. widget: formulaire d'application pour une demande de crédit bancaire.",
                 "► Deals widget: listing des ventes, tri, filtres, recherche.",
                 "► Offer Sheet widget: récapitulatif de l'offre, prêt à l'impression.",
                 "► Trade-in widget: intégration d'un véhicule d'échange avec une valeur de reprise déduite.",
                 "► Contact widget: listing de tous les contacts et fiche détaillée par contact."
             ],
             "uikit": [
-                "Développement et maintien de nouveaux composants UI. Développement de nouveaux designs et création de nouvelles maquettes en vue du développement des nouveaux widgets pour les applications Desking360 et CRM360."
+                "Développement et maintien de nouveaux composants UI. Développement de nouveaux designs et création de nouvelles maquettes en vue du développement des nouveaux widgets pour les applications Desking 360 et CRM 360."
             ],
             "drawing": [
                 "En charge du développement et du maintien de ce module:",
@@ -183,14 +183,14 @@
         },
         "description": {
             "desking": [
-                "Desking360 est un gestionnaire de soumissions innovant d'achat de véhicules en ligne, du choix de la marque et du modèle, jusqu'à la livraison à domicile.",
+                "Desking 360 est un gestionnaire de soumissions innovant d'achat de véhicules en ligne, du choix de la marque et du modèle, jusqu'à la livraison à domicile.",
                 "\u00A0",
                 "Cette application est utilisée par les concessionnaires automobiles sur le marché nord-américain. Leurs clients peuvent accéder aux véhicules enregistrés dans leur garage virtuel et valider la transaction en ligne.",
                 "\u00A0",
-                "L'application React est utilise Next.js et est embarquée dans le CRM (app web CRM360 en Angular.js)"
+                "L'application React utilise Next.js et est embarquée dans le CRM (app web CRM 360 en Angular.js)"
             ],
             "widgets": [
-                "Les widgets on été développés en React.js et sont embarqués dans Desking360 et CRM360.",
+                "Les widgets ont été développés en React.js et sont embarqués dans Desking 360 et CRM 360.",
                 "L'architecture de ces applications a été développée à partir du boilerplate Razzle (application SSR)."
             ],
             "uikit": [
@@ -213,12 +213,12 @@
                 "\u00A0",
                 "Les utilisateurs gèrent leurs projets, créent et envoient des devis, développent leur clientèle et leurs ventes.",
                 "\u00A0",
-                "Le module de dessin (cf. 'drawing') est un outil front-end intégré à l'application qui permet d'installer virtuellement des pannaux solaires, afin d'analyser, calculer et ainsi définir des projets."
+                "Le module de dessin (cf. 'drawing') est un outil front-end intégré à l'application qui permet d'installer virtuellement des panneaux solaires afin d'analyser, calculer et ainsi définir des projets."
             ],
             "labam": [
-                "Le concept original de la boîte à mots est de choisir un dictionnaire (càd. une liste de mots) et des paramètres pour obtenir des mots nouveaux.",
+                "Le concept original de 'La boîte à mots' est de choisir un dictionnaire (i.e. une liste de mots) et des paramètres pour obtenir des mots nouveaux.",
                 "\u00A0",
-                "Actuellement l'application web invente des prénoms, elle intègre donc pour le moment un seul dictionnaire. Elle est faite en React.js, et la connexion/déconnexion et la sauvegarde des mots sur un compte utilisateur ont été développées avec Firebase.",
+                "Actuellement, l'application web invente des prénoms, elle intègre donc pour le moment un seul dictionnaire. Elle est faite en React.js, et la connexion/déconnexion et la sauvegarde des mots sur un compte utilisateur ont été développées avec Firebase.",
                 "\u00A0",
                 "Les prochaines améliorations visent l'algorithme de génération (notamment pour l'intégration de paramètres comme l'originalité, la sonorité), certains aspects base de données, ainsi que UI/UX."
             ],
@@ -249,7 +249,7 @@
             "businessCard": "Carte de visite"
         },
         "about": {
-            "introduction": "Je suis développeuse web, et depuis plusieurs années maintenant je travaille essentiellement sur des technologies front-end. J'élargie mes activités avec du design et de l'intégration web.",
+            "introduction": "Je suis développeuse web. Depuis plusieurs années maintenant, je travaille essentiellement sur des technologies front-end. J'élargie mes activités avec du design et de l'intégration web.",
             "engineer": "Ingénieure en physique, j'ai également une expertise sur des projets qui nécessitent une approche scientifique, mathématique.",
             "nowadays": "Je suis actuellement en France, à mon compte. Je travaille à distance, seule ou en équipe, en anglais et en français.",
             "contact": "Entrer en contact"

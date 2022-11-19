@@ -178,8 +178,8 @@ export const projects = [
       text: 'projects.text.labam', 
       related: 'projects.personalProject',
       // relatedId: experienceIds.freelance22,
-      to: "https://la-bam-79775.firebaseapp.com/",
-      website: "la-bam-79775.firebaseapp.com",
+      to: "https://la-bam-79775.web.app/",
+      website: "la-bam-79775.web.app",
       repo: "https://github.com/ChloeBarbier/la-bam",
       tools: [
         tools.javascript,

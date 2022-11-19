@@ -173,6 +173,7 @@ export const experience = [
             tools.binaryProcessing,
             tools.avionics,
             tools.RD,
+            tools.agile
         ],
     },
     { 
