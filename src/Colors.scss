@@ -1,0 +1,57 @@
+/**
+This file isn't used at the moment
+**/
+// colors
+$base-color: #c6538c;
+$grey: rgba(104, 104, 104, 1);
+$greyT: rgba(104, 104, 104, 0.6);
+$blue: rgba(76, 145, 211, 1);
+$blueT: rgba(76, 145, 211, 0.6);
+$lightblue: rgba(145, 214, 255, 1);
+$lightblueT: rgba(145, 214, 255, 0.6);
+$orange: rgba(196, 133, 106, 1);
+$orangeT: rgba(196, 133, 106, 0.6);
+$yellow: #fede5d;
+$pink: #ff7edb;
+$cyan: #03edf9;
+$salmon: #f97e72;
+$orange: #ee873c;
+$mint: #72f1b8;
+$purple: #b893ce;
+$bluepurple: #7a80b2;
+$fluopurple: #6923d3;
+$darkpurple: #391272;
+$darkfluopurple: #231e3f;
+$darkfluopurple-t: rgba(35, 30, 63, 0.3);
+$darkpurple: #232530;
+$darkerpurple: #241b2f;
+$darkgrey: #333539;
+$pink-t: #ff7edb99;
+$mint-t: #72f1b899;
+$cyan-t: #03edf999;
+$yellow-t: #fede5d99;
+$blue-t: rgba(76, 145, 211, 0.6);
+$light-blue-t: rgba(145, 214, 255, 0.6);
+$orange-t: rgba(196, 133, 106, 0.6);
+
+// filters
+$filter-purple: invert(75%) sepia(10%) saturate(1437%) hue-rotate(227deg) brightness(83%) contrast(92%);
+$filter-white: brightness(0) invert(1);
+$filter-black: invert(0%) sepia(0%) saturate(0%) hue-rotate(47deg) brightness(100%) contrast(104%);
+$filter-fluopurple: invert(14%) sepia(71%) saturate(5166%) hue-rotate(263deg) brightness(99%) contrast(93%);
+$filter-lightfluopurple: invert(27%) sepia(71%) saturate(2881%) hue-rotate(252deg) brightness(99%) contrast(95%);
+$filter-white-shadow: brightness(0) invert(1) drop-shadow(0px 0px 5px white);
+$filter-white-shadow-fluopurple: brightness(0) invert(1) drop-shadow(0px 0px 5px $fluopurple);
+
+// Purple colors
+$lightfluopurple: rgb(142, 69, 246);
+$lightfluopurple-t-light: rgba(142,69,246,0.8);
+$lightfluopurple-t: rgba(142, 69, 246, 0.5);
+$lightfluopurple-t-plus: rgba(142,69,246,0.3);
+
+// Orange colors
+// $lightfluopurple-t-light: rgba(196, 133, 106,0.8);
+// $lightfluopurple-t: rgba(196, 133, 106, 0.5);
+// $lightfluopurple-t-plus: rgba(196, 133, 106,0.3);
+// $purple: orange;
+// $fluopurple: rgb(188, 124, 7);

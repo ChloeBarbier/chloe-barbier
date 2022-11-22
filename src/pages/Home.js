@@ -1,22 +1,14 @@
-import React, { useEffect, useContext } from 'react';
+import React from 'react';
 import { useTranslation } from "react-i18next";
-import { Context } from '../config/state.manager';
 import Title from '../components/Title';
 import { DivEnd, DivStart, Text } from '../components/Html';
 
 const Home = () => {
   const { t } = useTranslation();
-  const { dispatch } = useContext(Context);
-
   const webdev = t("home.webdev");
   const frontend = t("home.frontend");
   const engineer = t("home.engineer");
   const physics = t("home.physics");
-
-  useEffect(() => {
-    dispatch({ type:'setHomeIsActive', homeIsActive: true });
-    return () => dispatch({ type:'setHomeIsActive', homeIsActive: false });
-  }, [dispatch]);
 
   return (
     <div className='container home'>

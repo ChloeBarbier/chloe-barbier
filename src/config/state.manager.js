@@ -2,7 +2,8 @@ import React, { useReducer } from 'react';
 import PropTypes from 'prop-types';
 
 const initialState = {
-    homeIsActive: false,
+  // Currently useless 
+  darkMode: true,
 };
 
 const Context = React.createContext(initialState);
@@ -15,10 +16,10 @@ const reducer = (state, action) => {
         ...state,
       };
     }
-    case 'setHomeIsActive': {
+    case 'setDarkMode': {
       return {
         ...state,
-        homeIsActive: action.homeIsActive === true
+        darkMode: action.darkMode === true
       };
     }
     default:

@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { Context } from './config/state.manager';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
-import { initialState } from './config/state.manager';
 import Header from './pages/Header';
 import Main from './pages/Main';
 import Footer from './pages/Footer';
@@ -11,15 +9,8 @@ import { Language } from './enums/Language';
 
 const App = () => {
   const { i18n } = useTranslation();
-  const { state } = useContext(Context);
-  const { homeIsActive } = state || initialState;
-  let [isActive, setIsActive] = useState(homeIsActive);
   let [lang, setLang] = useState(i18n.language);
   let [searchParams] = useSearchParams({});
-
-  useEffect(() => {
-    setIsActive(homeIsActive === true);
-  }, [homeIsActive]);
 
   useEffect(() => {
     var langParam = searchParams.get('lang');
@@ -30,7 +21,7 @@ const App = () => {
 }, [searchParams, lang, i18n])
 
   return (
-    <div className={`App ${isActive ? 'HomeIsActive' : ''}`}>
+    <div className={`App`}>
       <Header lang={lang} />
       <Main />
       <Footer />
