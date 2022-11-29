@@ -159,10 +159,11 @@
                 "Développement et maintien de nouveaux composants UI. Développement de nouveaux designs et création de nouvelles maquettes en vue du développement des nouveaux widgets pour les applications Desking 360 et CRM 360."
             ],
             "drawing": [
-                "En charge du développement et du maintien de ce module:",
-                "► Mathématiques, géométrie dans l'espace, algorithmique.",
-                "► Recherche et développement de fonctionnalités, correction de bugs.",
-                "► Implémentation des nouvelles versions au sein des applications."
+                "En charge du module:",
+                "► Mathématiques, algorithmique.",
+                "► Géométrie dans l'espace, théorie des graphes.",
+                "► Recherche et développement des nouvelles fonctionnalités, correction de bugs.",
+                "► Implémentation des nouvelles versions au sein des applications de Sofdesk."
             ],
             "roofgraf":  [
                 "Intégration continue du module de dessin et de ses nouvelles fonctionnalités au sein de Roofgraf.",
@@ -216,11 +217,13 @@
                 "Le module de dessin (cf. 'drawing') est un outil front-end intégré à l'application qui permet d'installer virtuellement des panneaux solaires afin d'analyser, calculer et ainsi définir des projets."
             ],
             "labam": [
-                "Le concept original de 'La boîte à mots' est de choisir un dictionnaire (i.e. une liste de mots) et des paramètres pour obtenir des mots nouveaux.",
+                "Le concept original de 'La boîte à mots' est de choisir un dictionnaire (i.e. une liste de mots) et des paramètres pour obtenir des mots nouveaux, inexistants.",
                 "\u00A0",
-                "Actuellement, l'application web invente des prénoms, elle intègre donc pour le moment un seul dictionnaire. Elle est faite en React.js, et la connexion/déconnexion et la sauvegarde des mots sur un compte utilisateur ont été développées avec Firebase.",
+                "Pour que les mots sonnent bien, on utilise une chaîne de Markov, sur deux itérations. L'état futur ne dépend que de l'état présent, il n'y a donc pas de mémoire, ce qui permet de fabriquer des mots réellement nouveaux.",
                 "\u00A0",
-                "Les prochaines améliorations visent l'algorithme de génération (notamment pour l'intégration de paramètres comme l'originalité, la sonorité), certains aspects base de données, ainsi que UI/UX."
+                "Actuellement, l'application web invente des prénoms (dictionnaire). Elle est faite en React.js, et la connexion/déconnexion et la sauvegarde des mots sur un compte utilisateur ont été développées avec Firebase.",
+                "\u00A0",
+                "Les prochaines améliorations visent l'algorithme de génération, certains aspects base de données, et UI/UX."
             ],
             "portfolio": [
                 "Ce portfolio est une application web en React.js, construite à partir du boilerplate create-react-app. Les frameworks intéressants utilisés dans ce projet sont :",
