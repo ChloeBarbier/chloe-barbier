@@ -1051,6 +1051,18 @@ $filter_photo: var(--filter_photo);
           border-width: 0.25rem;
         }
       }
+      .projects .projects-grid .project:hover {
+        .project-cell {
+          opacity: unset;
+          box-shadow: unset;
+        }
+        .project-overlay {
+          opacity: 0;
+          .text {
+            display: none;
+          }
+        }
+      }
       .contact .description.about-description {
         margin-top: 1.5rem;
       }
