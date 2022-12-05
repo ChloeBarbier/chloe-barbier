@@ -39,28 +39,28 @@ const BusinessCard = ({setisMouseHover, isMouseHover}) => {
                         </div>
                         <br />
 
-                        <div className='tel'>
+                        <div className='link tel'>
                             <a className={class_a} href="tel:+33650966461" target="_blank" rel="noreferrer">
                                 <BsTelephoneFill className="cell shrink social-media-icons"/>
                                 <span className="cell shrink social-media-text">{myNumber}</span>
                             </a>
                         </div>
 
-                        <div className='mail'>
+                        <div className='link mail'>
                             <a className={class_a} href={`mailto:${myEmail}`} target="_blank" rel="noreferrer">
                                 <GrMail className="cell shrink social-media-icons"/>
                                 <span className="cell shrink social-media-text">{myEmail}</span>
                             </a>
                         </div>
 
-                        <div className='linkedin'>
+                        <div className='link linkedin'>
                             <a className={class_a} href={myLinkedin} target="_blank" rel="noreferrer">
                                 <FaLinkedin className="cell shrink social-media-icons"/>
                                 <span className="cell shrink social-media-text"> LinkedIn</span>
                             </a>
                         </div>
 
-                        <div className='github'>
+                        <div className='link github'>
                             <a className={class_a} href={myGithub} target="_blank" rel="noreferrer">
                                 <BsGithub className="cell shrink social-media-icons"/>
                                 <span className="cell shrink social-media-text"> GitHub</span>

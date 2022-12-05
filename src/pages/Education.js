@@ -6,9 +6,11 @@ import CollapseButton from '../components/CollapseButton';
 import ExpandButton from '../components/ExpandButton';
 import { education }  from "../data/education";
 import Title from '../components/Title';
+import { LIMIT_WIDTH_MOBILE } from '../enums/Style';
 
 const Experience = () => {
   const { t } = useTranslation();
+  const isMobile = window.screen.width <= LIMIT_WIDTH_MOBILE;
 
   const onClick = (key) => {
     var button = document.getElementById(`button-${key}`);
@@ -43,21 +45,25 @@ const Experience = () => {
         {education.map((item, key) => {
           return (
             <React.Fragment key={key}>
-              <button className="accordion" id={`button-${key}`} onClick={() => onClick(key)}>
+              <button className="accordion" id={`button-${item.id}`} onClick={() => onClick(item.id)}>
                 <div className="grid-x align-middle">
-                  <div className='title small-8'>
+                  <div className='title small-7 medium-8'>
                     <span className='job-position'>{t(item.graduation)}</span>
-                    <span style={{marginTop: '1rem'}} className='company'> @{t(item.school)}</span>
+                    <span className='company'> @{t(item.school)}</span>
                   </div>
-                  <div className='date small-4'>
-                    {item.date}
-                    <span className='sign' id={`sign-${key}`}>+</span>
+                  <div className='date small-5 medium-4 grid-x align-middle'>
+                    <span className='cell auto float-right'>
+                      {isMobile
+                      ? item.date.replaceAll(' . ', '-')
+                      : item.date}
+                    </span>
+                    <span className='cell shrink sign float-right' id={`sign-${item.id}`}>+</span>
                   </div>
                 </div>
               </button>
-              <div className="panel" id={`panel-${key}`}>
+              <div className="panel" id={`panel-${item.id}`}>
                 <div className='grid-x'>
-                  <div className="cell small-9 grid-y description">
+                  <div className="cell small-12 medium-9 grid-y description">
                     {/* <div className="cell shrink duration">{item.duration}</div> */}
                     <div className='cell details grid-x'>
                       <div className="cell shrink grid-x location align-middle">
@@ -67,7 +73,7 @@ const Experience = () => {
                       <div className="cell shrink grid-x website align-middle">
                         <TfiWorld className="cell shrink svg-website icon" />
                         <div className="cell shrink">
-                          <a key={key} href={item.to} target="_blank" className="row grid-x" rel="noreferrer">{item.website}</a>
+                          <a key={`website-${item.id}`} href={item.to} target="_blank" className="row grid-x" rel="noreferrer">{item.website}</a>
                         </div>
                       </div>
                      {item.prize &&
@@ -87,7 +93,7 @@ const Experience = () => {
                       })}
                     </div>
                   </div>
-                  <div className="cell small-3 photo">
+                  <div className="cell small-12 medium-3 photo">
                     <img className="img-school" src={`./assets/img/education/` + item.photo} alt={item.photo} />
                   </div>
                 </div>

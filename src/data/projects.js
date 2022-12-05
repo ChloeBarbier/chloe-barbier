@@ -77,7 +77,7 @@ export const projects = [
       date: "2019 - 2021",
       thumbnail: 'uikit.png', 
       photo: 'uikit.png', 
-      name: "Ui-kit", 
+      name: "Ui-kit 360", 
       text: 'projects.text.uikit',
       related: 'Solutions Medias 360',
       relatedId: experienceIds.sm360,

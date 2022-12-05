@@ -8,9 +8,11 @@ import CollapseButton from '../components/CollapseButton';
 import ExpandButton from '../components/ExpandButton';
 import Title from '../components/Title';
 import { getNewSearchParams } from '../tools';
+import { LIMIT_WIDTH_MOBILE } from '../enums/Style';
 
 const Experience = () => {
   const { t } = useTranslation();
+  const isMobile = window.screen.width <= LIMIT_WIDTH_MOBILE;
   let [searchParams] = useSearchParams({});
 
   const onClickAccordion = (experienceId) => {
@@ -60,22 +62,39 @@ const Experience = () => {
             <React.Fragment key={key}>
               <button className="accordion" id={`button-${item.id}`} onClick={() => onClickAccordion(item.id)}>
                 <div className="grid-x align-middle">
-                  <div className='title small-8'>
+                  <div className='title small-8 medium-8'>
                     <span className='job-position'>{t(item.position)}</span>
                     <span className='company'> @{t(item.company)}</span>
                   </div>
-                  <div className='date small-4'>
-                    {item.date.length === 2 
-                    ? item.date[0] + " . " + t(item.date[1])
-                    : item.date[0]
-                    }
-                    <span className='sign' id={`sign-${item.id}`}>+</span>
+                  <div className='date small-4 medium-4 grid-x align-middle'>
+                    {!isMobile ? (
+                    <span className='cell auto float-right'>
+                      {item.date.length === 2 
+                        ? item.date[0] + " . " + t(item.date[1])
+                        : item.date[0]
+                      }
+                    </span>
+                    ) : (
+                    <span className='cell auto float-right'>
+                      {item.date.length === 2 
+                        ? <span className="grid-y">
+                            <span className="cell">{item.date[0]}</span>
+                            <span className="cell">
+                              {t(item.date[1]) === 'maintenant'
+                                ? t(item.date[1]).slice(0, 5)+'.'
+                                : t(item.date[1])}
+                            </span>
+                          </span>
+                        : item.date[0]
+                      }
+                    </span>)}
+                    <span className='cell shrink sign float-right' id={`sign-${item.id}`}>+</span>
                   </div>
                 </div>
               </button>
               <div className="panel" id={`panel-${item.id}`}>
                 <div className='grid-x'>
-                  <div className="cell small-9 grid-y description">
+                  <div className="cell small-12 medium-9 grid-y description">
                     {/* <div className="cell shrink duration">{item.duration}</div> */}
                     <div className='cell details grid-x'>
                       <div className="cell shrink grid-x location align-middle">
@@ -116,7 +135,7 @@ const Experience = () => {
                       })}
                     </div>
                   </div>
-                  <div className="cell small-3 photo">
+                  <div className="cell small-12 medium-3 photo">
                     <img src={`./assets/img/experience/` + item.photo} alt={item.photo} />
                   </div>
                 </div>

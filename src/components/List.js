@@ -7,9 +7,11 @@ import { TfiWorld } from 'react-icons/tfi';
 import { BsYoutube, BsGithub } from 'react-icons/bs';
 import { MdOutlineCorporateFare, MdEmojiPeople } from 'react-icons/md';
 import { getNewSearchParams } from '../tools';
+import { LIMIT_WIDTH_MOBILE } from '../enums/Style';
 
 const List = ({seletedProjectId, onClickAccordion}) => {
   const { t } = useTranslation();
+  const isMobile = window.screen.width <= LIMIT_WIDTH_MOBILE;
 
   const openAccordion = (key) => {
     var button = document.getElementById(`button-${key}`);
@@ -49,13 +51,17 @@ const List = ({seletedProjectId, onClickAccordion}) => {
           <React.Fragment key={key}>
             <button className="accordion" id={`button-${item.id}`} onClick={() => onClick(item.id)}>
               <div className="grid-x align-middle">
-                <div className='title small-8'>
+                <div className='title small-7 medium-8'>
                   <span className='name'>{item.name}</span>
                   <span className='company'> @{t(item.related)}</span>
                 </div>
-                <div className='date small-4'>
-                  {item.date}
-                  <span className='sign' id={`sign-${item.id}`}>+</span>
+                <div className='date small-5 medium-4 grid-x align-middle'>
+                  <span className='cell auto float-right'>
+                  {isMobile
+                      ? item.date.replaceAll(' ', '')
+                      : item.date}
+                  </span>
+                  <span className='cell shrink sign float-right' id={`sign-${item.id}`}>+</span>
                 </div>
               </div>
             </button>
@@ -64,7 +70,7 @@ const List = ({seletedProjectId, onClickAccordion}) => {
 
               <div className='grid-x grid-margin-x description'>
 
-                <div className='cell small-12 details grid-x'>
+                <div className='cell small-12 medium-12 details grid-x'>
 
                   {item.relatedId && 
                   <Link className='cell shrink grid-x related align-middle' to={`/experience${getNewSearchParams({'experienceId': item.relatedId})}`}>
@@ -91,11 +97,11 @@ const List = ({seletedProjectId, onClickAccordion}) => {
 
                 </div>
 
-                <div className="cell small-5 photo">
+                <div className="cell small-12 medium-5 photo">
                   <img className="img-project" src={`./assets/img/projects/photo/` + item.photo} alt={item.photo} />
                 </div>
 
-                <div className="cell small-7 grid-y align-center description">
+                <div className="cell small-12 medium-7 grid-y align-center description">
 
                   <div className="cell text">
                     {t(item.description, {returnObjects: true}).map((text, key) => (<div key={key} className='sub-text'>{text}</div>))}

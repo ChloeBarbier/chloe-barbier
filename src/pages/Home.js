@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div className='container home'>
-      <div className="container-title grid-y">
+      <div className="container-title grid-y align-middle">
           <Title  text="Chloé Barbier" />
           <div className='title-html grid-y'>
             <DivStart tab="" text="present job" />
