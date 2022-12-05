@@ -17,7 +17,7 @@ const Grid = ({onClickProject}) => {
                         {obj.name}
                     </div>
                 </div>
-                <button onClick={() => onClickProject(obj.id)}>
+                <button className="project-button" onClick={() => onClickProject(obj.id)}>
                     <div className="project-overlay">
                         <div className="text">
                             {t(obj.text)}
